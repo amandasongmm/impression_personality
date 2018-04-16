@@ -5,15 +5,21 @@ import numpy as np
 
 cwd = os.getcwd()
 
+# CHANGE THESE (or rename your folders to match this)
 e_path = "%s/VC/pics/e"%cwd
 vc_path = "%s/VC/pics/vc"%cwd
 
+# will contain the list of errors
 Errors = []
+
+# The types of errors 
 category1 = "1. Not a face / no face found"
 category2 = "2. Face covered"
 category3 = "3. Cannot open"
 category6 = "6. Multiple faces"
 
+# just a helper function to abstract writing a list of errors to a file
+# relative to the current folder being analyzed
 def write_to_file(path, errors):
 	file = open("%s/invalid_photos.txt"%path, "w")
 	for error in errors:
@@ -21,6 +27,7 @@ def write_to_file(path, errors):
 
 	file.close()
 
+# helper function to analyze all the photos in a specific folder
 def analyze_photos(path):
 	
 	cropped_images_path = "%s/cropped_photos"%path
@@ -60,10 +67,9 @@ def analyze_photos(path):
 
 			#
 			#	-- Skip Invalid Image: Person is wearing glasses
-			#
+			#		
 			#if len(glasses) > 1: 
 			#	continue;
-
 			#for (gx, gy, gw, gh) in glasses:
 			#	cv2.rectangle(roi_color, (gx, gy), (gx + gw, gy + gh), (0, 0, 255), 2)
 
@@ -90,19 +96,26 @@ def analyze_photos(path):
 		filename = os.path.basename(profile_pic)
 		cv2.imwrite("%s/%s"%(cropped_images_path,filename), final_cropped)
 
+	# write the errors, and then clear errors for next folder
 	write_to_file(path, Errors)
 	Errors.clear()
 
+# load haar cascade filters
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 glasses_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
+# gets all the directories within e and vc
 e_folders = [dir[0] for dir in os.walk(e_path)]
 vc_folders = [dir[0] for dir in os.walk(vc_path)]
 
-'''
 for e_dir in e_folders:
+	# don't make cropped_photos directories within other cropped_photos directories
+	# and skip the base dir
+	curr_dir = os.path.basename(e_dir) 
+	if curr_dir == "cropped_photos" or curr_dir == "e":
+		continue
+	print("Cleaning and cropping %s"%e_dir)
 	analyze_photos(e_dir)
-'''
 
 for v_dir in vc_folders:
 	# don't make cropped_photos directories within other cropped_photos directories
@@ -111,4 +124,4 @@ for v_dir in vc_folders:
 	if curr_dir == "cropped_photos" or curr_dir == "vc":
 		continue
 	print("Cleaning and cropping %s"%v_dir)
-	# analyze_photos(v_dir)
+	analyze_photos(v_dir)
