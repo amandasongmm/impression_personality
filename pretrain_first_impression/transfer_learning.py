@@ -6,6 +6,19 @@ import skimage.io
 import skimage.transform
 import os
 import math
+import pandas as pd
+from sklearn.model_selection import StratifiedShuffleSplit
+import time
+from tensorflow.python.saved_model import builder as saved_model_builder
+from tensorflow.python.saved_model.signature_def_utils import predict_signature_def
+from tensorflow.python.saved_model.tag_constants import SERVING
+from tensorflow.python.saved_model.signature_constants import DEFAULT_SERVING_SIGNATURE_DEF_KEY
+from tensorflow.python.saved_model.signature_constants import PREDICT_INPUTS
+from tensorflow.python.saved_model.signature_constants import PREDICT_OUTPUTS
+
+
+# This script is adapted based on
+# https://github.com/mdietrichstein/vgg16-transfer-learning/blob/master/vgg16_transfer_learning.ipynb
 
 default_device = '/gpu:0'
 num_hidden_neurons = 256
@@ -14,8 +27,11 @@ vgg_mean = [103.939, 116.779, 123.68]
 
 model_version = 3
 model_path = 'models/model-{}/'.format(model_version)
-weights_path = '/home/amanda/Github/vgg_models/vgg16_weights.npz'
-print('test')
+# weights_path = '/home/amanda/Github/vgg_models/vgg16_weights.npz'
+# all_im_dir = '/home/amanda/Github/attractiveness_datamining/MIT2kFaceDataset/2kfaces/'
+
+weights_path = '/home/amanda/Documents/vgg_dataset/vgg16_weights.npz'
+all_im_dir = '/home/amanda/Documents/mit2k/'
 
 
 def get_batches(x, y, batch_size=32):
@@ -159,15 +175,78 @@ def extract_features(image_directory, batch_size=32):
         return codes_fc6, codes_fc7
 
 
-def main():
+def extract_f67_feat():
     print('Extracting training codes for fc6 and fc7')
-    all_im_dir = '/home/amanda/Github/attractiveness_datamining/MIT2kFaceDataset/2kfaces/'
     all_im_feature_fc6, all_im_feature_fc7 = extract_features(all_im_dir)
     np.save('all_im_fc6.npy', all_im_feature_fc6)
     np.save('all_im_fc7.npy', all_im_feature_fc7)
 
 
+def train_test_split():
+    select_rating_path = 'selected_score.pkl'
+    feats = np.load('all_im_fc6.npy')
+    df = pd.read_pickle(select_rating_path)
+
+    feat_num = 4096
+    rating_impression_num = 6
+    feat_arr = np.empty((0, feat_num), dtype=np.float32)
+    rating_arr = np.empty((0, rating_impression_num), dtype=np.float32)
+
+    for index, row in df.iterrows():
+        file_name = row['Filename']
+        if file_name in feats.keys():
+            cur_feat = feats[file_name]
+            cur_rating = [row['attractive'], row['aggressive'], row['trustworthy'], row['intelligent'], row['sociable'],
+                          row['responsible']]
+            feat_arr = np.append(feat_arr, np.array([cur_feat]), axis=0)
+            rating_arr = np.append(rating_arr, np.array([cur_rating]), axis=0)
+        else:
+            print('Image {} is not loaded correctly in vgg network. Check what happened.'.format(file_name))
+
+    splitter = StratifiedShuffleSplit(n_splits=1, test_size=0.1)
+    train_indices, test_indices = next(splitter.split(feat_arr, rating_arr))
+
+    train_feat, train_rating = feat_arr[train_indices], rating_arr[train_indices]
+    test_feat, test_rating = feat_arr[test_indices], rating_arr[test_indices]
+
+    return train_feat, train_rating, test_feat, test_rating
+
+
+def transfer_exp_1():
+    """Use a small NN with a single hidden layer"""
+    if os.path.exists(model_path):
+        raise Exception('Directory "{}" already exists. Delete or move it.'.format(model_path))
+
+    num_epochs = 5
+    learning_rate = 0.01
+    keep_prob = 0.5
+    batch_size = 64
+    accuracy_print_steps = 10
+    iterations = 0
+
+    tf.reset_default_graph()
+
+    with tf.device(default_device):
+        with tf.Session(graph=tf.Graph()) as sess:
+
+            with tf.name_scopes('inputs'):
+                _images = tf.placeholder(tf.float32, shape=(None, 4096), name='images')
+                _keep_prob = tf.placeholder(tf.float32, name='keep_probability')
+
+            with tf.name_scope('targets'):
+                _ratings = tf.placeholder(tf.float32, shape=(None, 6), name='ratings')
+            with tf.name_scope('hidden_layer'):
+                hidden_weights = tf.Variable(initial_value=tf.truncated_normal([4096, num_hidden_neurons], mean=0.0,
+                                                                               stddev=0.01),
+                                             dtype=tf.float32, name='hidden_weights')
+
+
+
+
+    return
+
+
 if __name__ == '__main__':
-    main()
+    extract_f67_feat()
 
 
