@@ -184,15 +184,17 @@ def extract_features(image_directory, batch_size=32):
 def extract_f67_feat():
     print('Extracting training codes for fc6 and fc7')
     all_im_feature_fc6, all_im_feature_fc7 = extract_features(all_im_dir)
-    np.save('all_im_fc6.npy', all_im_feature_fc6)
-    np.save('all_im_fc7.npy', all_im_feature_fc7)
+    np.save('tmp_data/all_im_fc6.npy', all_im_feature_fc6)
+    np.save('tmp_data/all_im_fc7.npy', all_im_feature_fc7)
 
 
 def my_train_test_split(file_name='all_im_fc7.npy'):
+
     extract_feat_source = file_name[7:10]
     save_name = 'tmp_data/train_test_raw_data_' + extract_feat_source+'.npz'
-    select_rating_path = 'selected_score.pkl'
-    feats = np.load(file_name, encoding='latin1').item()
+    select_rating_path = 'tmp_data/selected_score.pkl'
+
+    feats = np.load('tmp_data/'+file_name, encoding='latin1').item()
     df = pd.read_pickle(select_rating_path)
 
     feat_num = 4096
@@ -235,7 +237,7 @@ def exp_1_pca(file_name='all_im_fc7.npy', pca_keep_dim_num=300):
     pca_save_name = 'tmp_data/pca_' + extract_feat_source + '_keep_num_' + str(pca_keep_dim_num) + '_model.sav'
     pickle.dump(pca, open(pca_save_name, 'wb'))
 
-    # when loading the model: loaded_model = pickle(open(file_name), 'wb')
+    # when loading the model: loaded_model = pickle.load(open(file_name), 'wb')
 
     print('number of pc: {},  explained variance = {}\n'.
           format(pca_keep_dim_num, np.cumsum(pca.explained_variance_ratio_)[-1]))
