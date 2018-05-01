@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Cleaning/clean_e.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cleaning/add_mask.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCE_predict_funding_classification.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/VCE_predict_funding_classification.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pretrain_first_impression/my_canvas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pretrain_first_impression/my_canvas.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pretrain_first_impression/predict_e.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretrain_first_impression/predict_e.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,49 +17,30 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/impression_personality$pretrain_model.coverage" NAME="pretrain_model Coverage Results" MODIFIED="1523947448800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pretrain_first_impression" />
     <SUITE FILE_PATH="coverage/impression_personality$transfer_learning.coverage" NAME="transfer_learning Coverage Results" MODIFIED="1524207474640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pretrain_first_impression" />
+    <SUITE FILE_PATH="coverage/impression_personality$add_mask.coverage" NAME="add_mask Coverage Results" MODIFIED="1525126733790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cleaning" />
+    <SUITE FILE_PATH="coverage/impression_personality$predict_e.coverage" NAME="predict_e Coverage Results" MODIFIED="1525137618752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pretrain_first_impression" />
     <SUITE FILE_PATH="coverage/impression_personality$predict_v.coverage" NAME="predict_v Coverage Results" MODIFIED="1524238310566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pretrain_first_impression" />
     <SUITE FILE_PATH="coverage/impression_personality$crop_and_prepare_im_lst.coverage" NAME="crop_and_prepare_im_lst Coverage Results" MODIFIED="1524219212221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cleaning" />
     <SUITE FILE_PATH="coverage/impression_personality$clean_e.coverage" NAME="clean_e Coverage Results" MODIFIED="1524535173055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cleaning" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="clean_e.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cleaning/clean_e.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="predict_e.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="552">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#296#3746#0" />
-                <element signature="e#512#549#0" />
+                <element signature="e#407#4591#0" />
+                <element signature="e#4497#5393#0" />
+                <element signature="e#4644#4949#0" />
+                <element signature="e#5006#5194#0" />
+                <element signature="e#5324#6239#0" />
+                <element signature="e#6489#9219#0" />
+                <element signature="e#9026#9560#0" />
+                <element signature="e#9519#9686#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="748" selection-start-line="748" selection-end-line="748" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="series.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="173" selection-start-line="173" selection-end-line="173" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="4187" selection-start-line="4187" selection-end-line="4187" />
             </state>
           </provider>
         </entry>
@@ -77,6 +58,8 @@
     <findStrings>
       <find>selected</find>
       <find>face_cascade</find>
+      <find>get_batches</find>
+      <find>load_image</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,6 +75,9 @@
         <option value="$PROJECT_DIR$/pretrain_first_impression/transfer_learning.py" />
         <option value="$PROJECT_DIR$/pretrain_first_impression/predict_v.py" />
         <option value="$PROJECT_DIR$/Cleaning/clean_e.py" />
+        <option value="$PROJECT_DIR$/Cleaning/crop_only.py" />
+        <option value="$PROJECT_DIR$/Cleaning/add_mask.py" />
+        <option value="$PROJECT_DIR$/pretrain_first_impression/predict_e.py" />
       </list>
     </option>
   </component>
@@ -105,10 +91,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2626" />
-    <option name="y" value="-4" />
-    <option name="width" value="2322" />
-    <option name="height" value="1444" />
+    <option name="x" value="3103" />
+    <option name="y" value="110" />
+    <option name="width" value="1" />
+    <option name="height" value="85" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -128,7 +114,7 @@
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
               <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
-              <item name="Cleaning" type="462c0819:PsiDirectoryNode" />
+              <item name="pretrain_first_impression" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -169,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.clean_e">
+  <component name="RunManager" selected="Python.predict_e">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="impression_personality" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,6 +170,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="add_mask" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="impression_personality" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cleaning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cleaning/add_mask.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -227,6 +232,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="predict_e" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="impression_personality" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pretrain_first_impression" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pretrain_first_impression/predict_e.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="predict_v" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="impression_personality" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,58 +270,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="prepare_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="impression_personality" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pretrain_first_impression" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pretrain_first_impression/prepare_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="transfer_learning" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="impression_personality" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pretrain_first_impression" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pretrain_first_impression/transfer_learning.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.prepare_data" />
-      <item itemvalue="Python.transfer_learning" />
       <item itemvalue="Python.crop_and_prepare_im_lst" />
       <item itemvalue="Python.predict_v" />
       <item itemvalue="Python.clean_e" />
+      <item itemvalue="Python.add_mask" />
+      <item itemvalue="Python.predict_e" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.predict_e" />
+        <item itemvalue="Python.add_mask" />
         <item itemvalue="Python.clean_e" />
         <item itemvalue="Python.predict_v" />
         <item itemvalue="Python.crop_and_prepare_im_lst" />
-        <item itemvalue="Python.transfer_learning" />
-        <item itemvalue="Python.prepare_data" />
       </list>
     </recent_temporary>
   </component>
@@ -320,17 +306,17 @@
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="right" id="Run" order="6" weight="0.40761524" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="right" id="Run" order="6" weight="0.3210421" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1739479" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.106613226" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Debug" order="7" weight="0.31342685" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Debug" order="7" weight="0.37154308" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -342,15 +328,14 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1739479" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1739479" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Run" order="6" weight="0.40773287" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
@@ -359,8 +344,9 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -373,17 +359,72 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Cleaning/clean_e.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Cleaning/clean_e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2328">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15696">
+          <caret line="748" selection-start-line="748" selection-end-line="748" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99048">
+          <caret line="4187" selection-start-line="4187" selection-end-line="4187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cleaning/clean_e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16456">
+          <caret line="748" selection-start-line="748" selection-end-line="748" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90794">
+          <caret line="4187" selection-start-line="4187" selection-end-line="4187" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Cleaning/crop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -529,75 +570,144 @@
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/util/_decorators.py" />
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/prepare_data.py" />
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/generic.py" />
-    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/pretrain_model.py">
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/indexes/base.py" />
+    <entry file="file://$PROJECT_DIR$/ent-labels.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="1236">
+          <caret line="748" selection-start-line="748" selection-end-line="748" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1236">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1236">
+          <caret line="4187" selection-start-line="4187" selection-end-line="4187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cleaning/clean_e.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cleaning/crop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1423">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="1368">
+          <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/pandas/core/indexes/base.py" />
-    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_v.py" />
+    <entry file="file://$PROJECT_DIR$/Cleaning/add_mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#68#75#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cleaning/crop_and_prepare_im_lst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="1323" selection-start-line="1323" selection-end-line="1323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/skimage/io/_plugins/pil_plugin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="1408" selection-start-line="1408" selection-end-line="1408" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/pretrain_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="e#636#1176#0" />
+            <element signature="e#1200#1713#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_v.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#488#1178#0" />
+            <element signature="e#1208#1757#0" />
+            <element signature="e#1802#2083#0" />
+            <element signature="e#2133#2309#0" />
+            <element signature="e#2335#6271#0" />
+            <element signature="e#6332#7791#0" />
+            <element signature="e#9617#11342#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/transfer_learning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="274" column="8" selection-start-line="274" selection-start-column="8" selection-end-line="274" selection-end-column="58" />
+        <state relative-caret-position="228">
+          <caret line="275" column="10" lean-forward="true" selection-start-line="275" selection-start-column="10" selection-end-line="275" selection-end-column="10" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#1582#1966#0" />
             <element signature="e#1992#5928#0" />
             <element signature="e#5979#6156#0" />
             <element signature="e#6243#7702#0" />
+            <element signature="e#7733#7975#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py">
+    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="4187" selection-start-line="4187" selection-end-line="4187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="748" selection-start-line="748" selection-end-line="748" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cleaning/crop_and_prepare_im_lst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cleaning/clean_e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="552">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#296#3746#0" />
-            <element signature="e#512#549#0" />
+            <element signature="e#407#4591#0" />
+            <element signature="e#4497#5393#0" />
+            <element signature="e#4644#4949#0" />
+            <element signature="e#5006#5194#0" />
+            <element signature="e#5324#6239#0" />
+            <element signature="e#6489#9219#0" />
+            <element signature="e#9026#9560#0" />
+            <element signature="e#9519#9686#0" />
           </folding>
         </state>
       </provider>
