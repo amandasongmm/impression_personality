@@ -40,11 +40,16 @@ def add_mask_on_one_im(input_im_dir, output_im_dir):
 
 
 if __name__ == '__main__':
-    im_dir = '/home/amanda/Documents/cropped_face/e_no_mask'
+    # im_dir = '/home/amanda/Documents/cropped_face/e_no_mask'  # Amanda office pc
+    im_dir = '/home/amanda/Documents/cropped_e/no_mask'  # Amanda home pc
     save_dir = '/home/amanda/Documents/cropped_face/e_with_mask'
     file_names = [f for f in listdir(im_dir) if isfile(join(im_dir, f))]
 
-    for f in file_names:
+    file_num = len(file_names)
+    for ind, f in enumerate(file_names):
+        if ind % 100 == 0:
+            print('{} out of {}'.format(ind+1, file_num))
+
         input_im_path = join(im_dir, f)
         output_im_path = join(save_dir, f)
         add_mask_on_one_im(input_im_path, output_im_path)
