@@ -15,6 +15,7 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.multioutput import MultiOutputRegressor
 from shutil import copyfile
+from scipy.stats import ttest_ind
 
 
 default_device = '/gpu:0'
@@ -356,7 +357,7 @@ def predict_on_e(feat_layer_file_name='conv53.npy'):
     print('Done! Elapsed time = {}'.format(time.time() - start_t))
 
 
-def analysis_on_e_prediction():
+def merge_data_e_pred_funding():
     e_prediction_dir = '/home/amanda/Documents/vgg_model/e_with_mask_feat'
 
     impression_prediction_file_name = 'conv53_prediction.npy'
@@ -369,39 +370,74 @@ def analysis_on_e_prediction():
 
     im_lst = pd.Series(valid_im_lst)
 
-    df = pd.DataFrame()
-    df['img_name'] = im_lst
+    e_pred_df = pd.DataFrame()  # put first impression predictions into this dataframe.
+    e_pred_df['img_name'] = im_lst
 
     rating_names = ['trustworthy', 'intelligent', 'attractive', 'aggressive', 'responsible', 'sociable']
     img_save_root_dir = '/home/amanda/Documents/cropped_face'
-    img_src_dir = '/home/amanda/Documents/cropped_face/e_with_mask'
+
     for ind, impression_name in enumerate(rating_names):
-        df[impression_name] = impression_array[:, ind]
+        e_pred_df[impression_name] = impression_array[:, ind]
         attribute_dir = os.path.join(img_save_root_dir, impression_name)
         if not os.path.exists(attribute_dir):
             os.makedirs(attribute_dir)
 
-    df_len = len(df)
-    for ind, row in df.iterrows():
-        cur_img_name = row['img_name']
-        src_path = os.path.join(img_src_dir, cur_img_name)
-        if ind % 100 == 0:
-            print('{} out of {}'.format(ind+1, df_len))
+    # cut the post-fix of the image name to get the e-id
+    e_pred_df['e_id'] = pd.Series([s[:-7] for s in e_pred_df['img_name'].values], index=e_pred_df.index)
 
-        for cur_attribute in rating_names:
-            cur_rating = row[cur_attribute]
-            dst_path = os.path.join(img_save_root_dir, cur_attribute, str(cur_rating)+'.jpg')
-            copyfile(src_path, dst_path)
+
+    # create a copy with images with their rating as the file name in different folder.
+    # df_len = len(df)
+    # img_src_dir = '/home/amanda/Documents/cropped_face/e_with_mask'
+    # for ind, row in df.iterrows():
+    #     cur_img_name = row['img_name']
+    #     src_path = os.path.join(img_src_dir, cur_img_name)
+    #     if ind % 100 == 0:
+    #         print('{} out of {}'.format(ind+1, df_len))
+    #
+    #     for cur_attribute in rating_names:
+    #         cur_rating = row[cur_attribute]
+    #         dst_path = os.path.join(img_save_root_dir, cur_attribute, str(cur_rating)+'.jpg')
+    #         copyfile(src_path, dst_path)
+
+    e_fund_data_df = pd.read_pickle('tmp_data/e_df.pkl')
+    short_e_fund_df = e_fund_data_df[e_fund_data_df['short_id'].isin(e_pred_df['e_id'])]
+    short_e_fund_df = short_e_fund_df.set_index('short_id')
+    short_e_fund_df = short_e_fund_df.loc[e_pred_df['e_id']]
+    short_e_fund_df['binary'] = (short_e_fund_df['E - VC Raised (log)'] != 0).astype(int)
+
+    e_pred_df['binary'] = short_e_fund_df['binary'].values
+    e_pred_df['fund'] = short_e_fund_df['E - VC Raised (log)'].values
+
+    e_pred_df.to_csv('./tmp_data/e_impression_predict.csv')
 
     return
 
+
+def analyze_e_pred():
+    e_pred = pd.read_csv('./tmp_data/e_impression_predict.csv')
+    attribute_names = ['trustworthy', 'intelligent', 'attractive', 'aggressive', 'responsible', 'sociable']
+
+    success = e_pred['binary'] == 1
+    fail = e_pred['binary'] == 0
+    cat_success = e_pred[success]
+    cat_fail = e_pred[fail]
+
+    for cur_attri in attribute_names:
+        print cur_attri
+        print ttest_ind(cat_success[cur_attri], cat_fail[cur_attri])
+        print e_pred[cur_attri][success].mean(), e_pred[cur_attri][fail].mean()
+        print e_pred[cur_attri][success].std(), e_pred[cur_attri][fail].std()
+
+    return
 
 # extract_e_feature()
 # extract_2kface_feature()
 # split_on_2k()
 # pca_and_regression_on_2k()
 # predict_on_e()
-analysis_on_e_prediction()
+# merge_data_e_pred_funding()
+analyze_e_pred()
 
 
 
