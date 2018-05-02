@@ -121,20 +121,6 @@ def load_image(image_path, mean=vgg_mean):
     return bgr
 
 
-def load_gender_info():
-    data = pd.read_csv('/home/amanda/Github/impression_personality/ent-labels.txt', sep="\t", header=None)
-    data.columns = ["faceId", "faceTopDimension", "faceLeftDimension", "faceWidthDimension", "faceHeightDimension",
-                    "smile", "pitch", "roll", "yaw", "gender", "age", "moustache", "beard", "sideburns", "glasses",
-                    "anger", "contempt", "disgust", "fear", "happiness", "neutral", "sadness", "surprise", "blurlevel",
-                    "blurvalue", "exposurelevel", "exposurevalue", "noiselevel", "noisevalue", "eymakeup", "lipmakeup",
-                    "foreheadoccluded", "eyeoccluded", "mouthoccluded", "hair-bald", "hair-invisible", "img_name", "nan"]
-
-    data = data.drop(data.index[0])
-    data = data[['img_name', 'smile', 'gender', 'age', 'glasses', 'anger', 'contempt', 'disgust', 'fear', 'happiness',
-                 'neutral', 'sadness', 'surprise']]
-    return
-
-
 def extract_features(image_directory, filenames, model_save_dir, batch_size=64):
     start_zero = time.time()
     tf.reset_default_graph()
@@ -210,11 +196,10 @@ def extract_e_feature():
     model_save_dir = '/home/amanda/Documents/vgg_model/e_with_mask_feat'
 
     im_name_lst = [f for f in os.listdir(e_dir) if os.path.isfile(os.path.join(e_dir, f))]
-    id_lst = [f[1:-7] for f in im_name_lst]
+    id_lst = [f[:-7] for f in im_name_lst]
     unique_id_lst = set(id_lst)
 
-    e_im_lst = ['e' + im_id + '_cb.jpg' if 'e' + im_id + '_cb.jpg' in im_name_lst else 'e' + im_id + '_tw.jpg'
-                for im_id in unique_id_lst]
+    e_im_lst = [im_id + '_cb.jpg' if im_id + '_cb.jpg' in im_name_lst else im_id + '_tw.jpg' for im_id in unique_id_lst]
     extract_features(image_directory=e_dir, filenames=e_im_lst, model_save_dir=model_save_dir)
 
 
@@ -430,6 +415,22 @@ def analyze_e_pred():
         print e_pred[cur_attri][success].std(), e_pred[cur_attri][fail].std()
 
     return
+
+
+def merge_gender_api():
+    api_data = pd.read_csv('/home/amanda/Github/impression_personality/ent-labels.txt', sep="\t", header=None)
+    api_data.columns = ["faceId", "faceTopDimension", "faceLeftDimension", "faceWidthDimension", "faceHeightDimension",
+                    "smile", "pitch", "roll", "yaw", "gender", "age", "moustache", "beard", "sideburns", "glasses",
+                    "anger", "contempt", "disgust", "fear", "happiness", "neutral", "sadness", "surprise", "blurlevel",
+                    "blurvalue", "exposurelevel", "exposurevalue", "noiselevel", "noisevalue", "eymakeup", "lipmakeup",
+                    "foreheadoccluded", "eyeoccluded", "mouthoccluded", "hair-bald", "hair-invisible", "img_name", "nan"]
+
+    api_data = api_data.drop(api_data.index[0])
+    api_data = api_data[['img_name', 'smile', 'gender', 'age', 'glasses', 'anger', 'contempt', 'disgust', 'fear', 'happiness',
+                 'neutral', 'sadness', 'surprise']]
+    return
+
+
 
 # extract_e_feature()
 # extract_2kface_feature()
