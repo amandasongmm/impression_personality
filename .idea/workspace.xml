@@ -22,31 +22,7 @@
     <SUITE FILE_PATH="coverage/impression_personality$clean_e.coverage" NAME="clean_e Coverage Results" MODIFIED="1524535173055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cleaning" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="predict_e.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="413" column="10" lean-forward="true" selection-start-line="413" selection-start-column="10" selection-end-line="413" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#633#4817#0" />
-                <element signature="e#4862#5147#0" />
-                <element signature="e#5197#5373#0" />
-                <element signature="e#5404#6319#0" />
-                <element signature="e#6407#9449#0" />
-                <element signature="e#9481#10112#0" />
-                <element signature="e#10149#10589#0" />
-                <element signature="e#10650#12253#0" />
-                <element signature="e#12344#15020#0" />
-                <element signature="e#15080#16295#0" />
-                <element signature="e#17530#17613#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,10 +68,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1" />
-    <option name="height" value="57" />
+    <option name="x" value="2624" />
+    <option name="y" value="-11" />
+    <option name="width" value="2497" />
+    <option name="height" value="1452" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -105,13 +81,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
               <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
+              <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
+              <item name="Cleaning" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
@@ -128,6 +108,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,8 +289,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="3375" height="1444" extended-state="6" />
-    <editor active="true" />
+    <frame x="2624" y="-11" width="2497" height="1452" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
@@ -318,10 +298,9 @@
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
       <window_info anchor="right" id="Run" order="6" weight="0.7996346" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10243316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10220441" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32840466" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -333,30 +312,31 @@
       <window_info anchor="right" x="0" y="0" width="793" height="1244" id="Documentation" order="5" side_tool="true" weight="0.32977778" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32840466" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1739479" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Run" order="6" weight="0.40773287" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Debug" order="7" weight="0.5353638" />
       <window_info anchor="right" x="0" y="0" width="793" height="1244" id="Documentation" order="5" side_tool="true" weight="0.32977778" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,21 +353,42 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6984">
+          <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#667#4851#0" />
+            <element signature="e#695#889#0" />
+            <element signature="e#4896#5181#0" />
+            <element signature="e#5231#5407#0" />
+            <element signature="e#6441#9483#0" />
+            <element signature="e#9515#10146#0" />
+            <element signature="e#10183#10623#0" />
+            <element signature="e#10684#12287#0" />
+            <element signature="e#12378#15054#0" />
+            <element signature="e#15114#16329#0" />
+            <element signature="e#18537#19452#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7788">
           <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#633#4817#0" />
-            <element signature="e#4862#5147#0" />
-            <element signature="e#5197#5373#0" />
-            <element signature="e#5404#6319#0" />
-            <element signature="e#6407#9449#0" />
-            <element signature="e#9481#10112#0" />
-            <element signature="e#10149#10589#0" />
-            <element signature="e#10650#12253#0" />
-            <element signature="e#12344#15020#0" />
-            <element signature="e#15080#16295#0" />
-            <element signature="e#17530#17613#0" />
+            <element signature="e#667#4851#0" />
+            <element signature="e#695#889#0" />
+            <element signature="e#4896#5181#0" />
+            <element signature="e#5231#5407#0" />
+            <element signature="e#6441#9483#0" />
+            <element signature="e#9515#10146#0" />
+            <element signature="e#10183#10623#0" />
+            <element signature="e#10684#12287#0" />
+            <element signature="e#12378#15054#0" />
+            <element signature="e#15114#16329#0" />
+            <element signature="e#18537#19452#0" />
           </folding>
         </state>
       </provider>
@@ -398,17 +399,17 @@
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#633#4817#0" />
-            <element signature="e#4862#5147#0" />
-            <element signature="e#5197#5373#0" />
-            <element signature="e#5404#6319#0" />
-            <element signature="e#6407#9449#0" />
-            <element signature="e#9481#10112#0" />
-            <element signature="e#10149#10589#0" />
-            <element signature="e#10650#12253#0" />
-            <element signature="e#12344#15020#0" />
-            <element signature="e#15080#16295#0" />
-            <element signature="e#17530#17613#0" />
+            <element signature="e#667#4851#0" />
+            <element signature="e#695#889#0" />
+            <element signature="e#4896#5181#0" />
+            <element signature="e#5231#5407#0" />
+            <element signature="e#6441#9483#0" />
+            <element signature="e#9515#10146#0" />
+            <element signature="e#10183#10623#0" />
+            <element signature="e#10684#12287#0" />
+            <element signature="e#12378#15054#0" />
+            <element signature="e#15114#16329#0" />
+            <element signature="e#18537#19452#0" />
           </folding>
         </state>
       </provider>
@@ -635,28 +636,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cleaning/add_mask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
+        <state relative-caret-position="1272">
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="413" column="10" lean-forward="true" selection-start-line="413" selection-start-column="10" selection-end-line="413" selection-end-column="10" />
+        <state relative-caret-position="156">
+          <caret line="392" lean-forward="true" selection-start-line="392" selection-end-line="392" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#633#4817#0" />
-            <element signature="e#4862#5147#0" />
-            <element signature="e#5197#5373#0" />
-            <element signature="e#5404#6319#0" />
-            <element signature="e#6407#9449#0" />
-            <element signature="e#9481#10112#0" />
-            <element signature="e#10149#10589#0" />
-            <element signature="e#10650#12253#0" />
-            <element signature="e#12344#15020#0" />
-            <element signature="e#15080#16295#0" />
-            <element signature="e#17530#17613#0" />
+            <element signature="e#667#4851#0" />
+            <element signature="e#695#889#0" />
+            <element signature="e#4896#5181#0" />
+            <element signature="e#5231#5407#0" />
+            <element signature="e#6441#9483#0" />
+            <element signature="e#9515#10146#0" />
+            <element signature="e#10183#10623#0" />
+            <element signature="e#10684#12287#0" />
+            <element signature="e#12378#15054#0" />
+            <element signature="e#15114#16329#0" />
+            <element signature="e#18537#19452#0" />
           </folding>
         </state>
       </provider>
