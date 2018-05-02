@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/amanda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cleaning/add_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cleaning/add_mask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrain_first_impression/my_canvas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pretrain_first_impression/my_canvas.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrain_first_impression/predict_e.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretrain_first_impression/predict_e.py" afterDir="false" />
-    </list>
+    <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +23,8 @@
       <file leaf-file-name="predict_e.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="374" column="4" lean-forward="true" selection-start-line="374" selection-start-column="4" selection-end-line="374" selection-end-column="104" />
+            <state relative-caret-position="588">
+              <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#605#4789#0" />
@@ -317,7 +311,7 @@
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
-      <window_info anchor="right" id="Run" order="6" visible="true" weight="0.5067588" />
+      <window_info anchor="right" id="Run" order="6" weight="0.5067588" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10183238" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -628,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/predict_e.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="374" column="4" lean-forward="true" selection-start-line="374" selection-start-column="4" selection-end-line="374" selection-end-column="104" />
+        <state relative-caret-position="588">
+          <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#605#4789#0" />
