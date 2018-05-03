@@ -389,13 +389,86 @@ def merge_data_e_pred_funding():
     short_e_fund_df = e_fund_data_df[e_fund_data_df['short_id'].isin(e_pred_df['e_id'])]
     short_e_fund_df = short_e_fund_df.set_index('short_id')
     short_e_fund_df = short_e_fund_df.loc[e_pred_df['e_id']]
-    short_e_fund_df['binary'] = (short_e_fund_df['E - VC Raised (log)'] != 0).astype(int)
+    short_e_fund_df['vc binary'] = (short_e_fund_df['E - VC Raised (log)'] != 0).astype(int)
+    short_e_fund_df['total binary'] = (short_e_fund_df['E - Total Raised (log)'] != 0).astype(int)
 
-    e_pred_df['binary'] = short_e_fund_df['binary'].values
-    e_pred_df['fund'] = short_e_fund_df['E - VC Raised (log)'].values
+    e_pred_df['vc binary'] = short_e_fund_df['vc binary'].values
+    e_pred_df['vc fund'] = short_e_fund_df['E - Total Raised (log)'].values
+    e_pred_df['total binary'] = short_e_fund_df['total binary'].values
+    e_pred_df['total fund'] = short_e_fund_df['E - Total Raised (log)'].values
+    e_pred_df['IPO'] = short_e_fund_df['E - IPO'].values
+    e_pred_df['success'] = np.where((e_pred_df['total binary'] == 1) | (e_pred_df['IPO'] == 1), 1, 0)
 
     e_pred_df.to_csv('./tmp_data/e_impression_predict.csv')
+    print('Impression merge done.')
+    return
 
+
+def merge_api_with_prediction():
+    print('Merge impression data with API data.')
+    # load the attribute data derived from microsoft API.
+    api_data = pd.read_csv('/home/amanda/Github/impression_personality/ent-labels.txt', sep="\t", header=None)
+    api_data.columns = ["faceId", "faceTopDimension", "faceLeftDimension", "faceWidthDimension", "faceHeightDimension",
+                    "smile", "pitch", "roll", "yaw", "gender", "age", "moustache", "beard", "sideburns", "glasses",
+                    "anger", "contempt", "disgust", "fear", "happiness", "neutral", "sadness", "surprise", "blurlevel",
+                    "blurvalue", "exposurelevel", "exposurevalue", "noiselevel", "noisevalue", "eymakeup", "lipmakeup",
+                    "foreheadoccluded", "eyeoccluded", "mouthoccluded", "hair-bald", "hair-invisible", "img_name", "nan"]
+
+    api_data = api_data.drop(api_data.index[0])
+    api_data = api_data[['img_name', 'smile', 'gender', 'age', 'glasses', 'anger', 'contempt', 'disgust', 'fear', 'happiness',
+                 'neutral', 'sadness', 'surprise']]
+    print('Length of original API data is {}'.format(len(api_data)))
+
+    # keep only one photo for each person. If both cb and tw are avaiable, choose cb.
+    api_img_lst = api_data['img_name'].values
+    id_lst = [f[:-7] for f in api_img_lst]
+    uni_id_lst = set(id_lst)  # unique lsit of e id.
+
+    api_unique_im_lst = [im_id+'_cb.jpg' if im_id+'_cb.jpg' in api_img_lst else im_id+'_tw.jpg' for im_id in uni_id_lst]
+    print('api unique contains {} photos. One photo per person.'.format(len(api_unique_im_lst)))
+
+    # load impression data.
+    e_pred_data = pd.read_csv('./tmp_data/e_impression_predict.csv')
+    e_pred_data = e_pred_data.drop('Unnamed: 0', axis=1)
+
+    # compare the name list in api_data and the name list in e_pred_data.
+    e_pred_im_lst = e_pred_data['img_name'].values
+    print('e impression data contain {} unique entries.'.format(len(e_pred_im_lst)))
+
+    # # make sure every image name in e_pred_im_lst can be found in the image folder.
+    # e_with_mask_dir = '/home/amanda/Documents/cropped_face/e_with_mask/'
+    #
+    # count = 0
+    # for ind, im in enumerate(e_pred_im_lst):
+    #     im_path = os.path.join(e_with_mask_dir, im)
+    #     if not os.path.isfile(im_path):
+    #         count += 1
+    #         print('{} not found. {}'.format(im, count))
+    # if count == 0:
+    #     print('Every entry in e prediction lst is found in the image folder.')
+
+    # compare the difference in api_unique_im_lst and e_pred_im_lst
+    common_lst = set(e_pred_im_lst) & set(api_unique_im_lst)  # 7800
+    only_in_api = set(api_unique_im_lst) - common_lst  # 105
+    only_in_e_pred = set(e_pred_im_lst) - common_lst  # 264
+
+    # sort api by common lst.
+    api_common_data = api_data[api_data['img_name'].isin(common_lst)]
+    api_common_data = api_common_data.drop_duplicates()  # 7800
+    api_common_data = api_common_data.set_index('img_name')
+    api_common_data = api_common_data.loc[common_lst]
+
+    # sort e_pred by common lst
+    e_pred_common_data = e_pred_data[e_pred_data['img_name'].isin(common_lst)]
+    e_pred_common_data = e_pred_common_data.set_index('img_name')
+    e_pred_common_data = e_pred_common_data.loc[common_lst]
+
+    # merge two dfs
+    merged_df = pd.concat([api_common_data, e_pred_common_data], axis=1)
+
+    # save as csv.
+    merged_df.to_csv('./tmp_data/merged_api_impression.csv')
+    print('Done!')
     return
 
 
@@ -417,28 +490,13 @@ def analyze_e_pred():
     return
 
 
-def merge_gender_api():
-    api_data = pd.read_csv('/home/amanda/Github/impression_personality/ent-labels.txt', sep="\t", header=None)
-    api_data.columns = ["faceId", "faceTopDimension", "faceLeftDimension", "faceWidthDimension", "faceHeightDimension",
-                    "smile", "pitch", "roll", "yaw", "gender", "age", "moustache", "beard", "sideburns", "glasses",
-                    "anger", "contempt", "disgust", "fear", "happiness", "neutral", "sadness", "surprise", "blurlevel",
-                    "blurvalue", "exposurelevel", "exposurevalue", "noiselevel", "noisevalue", "eymakeup", "lipmakeup",
-                    "foreheadoccluded", "eyeoccluded", "mouthoccluded", "hair-bald", "hair-invisible", "img_name", "nan"]
-
-    api_data = api_data.drop(api_data.index[0])
-    api_data = api_data[['img_name', 'smile', 'gender', 'age', 'glasses', 'anger', 'contempt', 'disgust', 'fear', 'happiness',
-                 'neutral', 'sadness', 'surprise']]
-    return
-
-
-
 # extract_e_feature()
 # extract_2kface_feature()
 # split_on_2k()
 # pca_and_regression_on_2k()
 # predict_on_e()
-# merge_data_e_pred_funding()
-analyze_e_pred()
-
+merge_data_e_pred_funding()
+# analyze_e_pred()
+merge_api_with_prediction()
 
 
