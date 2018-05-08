@@ -337,7 +337,7 @@ def predict_on_e(feat_layer_file_name='conv53.npy'):
         regressor = pickle.load(f)
 
     y_predict = regressor.predict(x_pca)
-    np.save(os.path.join(feature_save_dir, 'conv51_prediction.npy'), y_predict)
+    np.save(os.path.join(feature_save_dir, 'conv53_prediction.npy'), y_predict)
     print('Prediction saved.')
     print('Done! Elapsed time = {}'.format(time.time() - start_t))
 
