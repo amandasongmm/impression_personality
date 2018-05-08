@@ -409,38 +409,32 @@ def predict_e_new_all():
     return
 
 
-def mv_face():
+def mv_face(gender_match_word, other_criteria_word, other_criteria_value, save_dir_key_word):
     df_name = './tmp_data/merged_api_impression.csv'
     df = pd.read_csv(df_name)
 
-    female_only = df[df['gender'] == 'female']
-    female_su = female_only[female_only['success']==1]
-    female_fa = female_only[female_only['success']==0]
+    target_gender_df = df[df['gender'] == gender_match_word]
+    additional_criteria_df = target_gender_df[target_gender_df[other_criteria_word] == other_criteria_value]
 
-    male_only = df[df['gender'] == 'male']
-    male_su = male_only[male_only['success']==1]
-    male_fa = male_only[male_only['success']==0]
+    # Amanda Mac
+    im_root_dir = '/Users/amanda/Documents/E_faces/common_lst/'
+    im_dst_dir = '/Users/amanda/Documents/E_faces/gender_viz/'
 
-    im_root_dir = '/home/amanda/Documents/cropped_face/e_with_mask/'
-    im_dst_dir = '/home/amanda/Documents/gender_viz/'
+    # Amanda home pc
+    # im_root_dir = '/home/amanda/Documents/cropped_face/e_with_mask/'
+    # im_dst_dir = '/home/amanda/Documents/gender_viz/'
 
-    print('fe su')
-    for im in female_su['img_name'].values:
-        copyfile(im_root_dir+im, im_dst_dir+'fe_su/'+im)
+    print save_dir_key_word
+    dst_dir = os.path.join(im_dst_dir, save_dir_key_word)
 
-    print('fe fa')
-    for im in female_fa['img_name'].values:
-        copyfile(im_root_dir+im, im_dst_dir+'fe_fa/'+im)
+    if not os.path.exists(dst_dir):
+        os.makedirs(dst_dir)
 
-    print('ma su')
-    for im in male_su['img_name'].values:
-        copyfile(im_root_dir+im, im_dst_dir+'ma_su/'+im)
-
-    print('ma fa')
-    for im in male_fa['img_name'].values:
-        copyfile(im_root_dir+im, im_dst_dir+'ma_fa/'+im)
+    for im in additional_criteria_df['img_name'].values:
+        copyfile(im_root_dir + im, os.path.join(dst_dir, im))
 
     return
+
 
 # train_val_test_split_and_pca()
 # hyper_para_tuning()
@@ -460,5 +454,8 @@ def mv_face():
 # make_single_prediction_on_2k(feat='sociable', pca_num=320, conv_name='conv52')
 
 # predict_e_new_all()
+mv_face(gender_match_word='female',
+        other_criteria_word='IPO',
+        other_criteria_value=1,
+        save_dir_key_word='female-IPO-success')
 
-mv_face()
