@@ -225,7 +225,7 @@ def split_on_2k(feat_layer_file_name='maxpool5.npy'):
 
     # load extracted feature from model_save_dir. Feature extraction layers include conv51,2,3, maxpool5, fc6, fc7.
     feature_file_name = os.path.join(model_save_dir, feat_layer_file_name)
-    feat_arr = np.load(feature_file_name)  # 2176 * 100352, for example.
+    feat_arr = np.load(feature_file_name)  # 2176 * 100352, for examplecu.
 
     # load selected impression attribute scores
     select_rating_path = 'tmp_data/selected_score.pkl'
