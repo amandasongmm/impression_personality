@@ -417,12 +417,16 @@ def mv_face(gender_match_word, other_criteria_word, other_criteria_value, save_d
     additional_criteria_df = target_gender_df[target_gender_df[other_criteria_word] == other_criteria_value]
 
     # Amanda Mac
-    im_root_dir = '/Users/amanda/Documents/E_faces/common_lst/'
-    im_dst_dir = '/Users/amanda/Documents/E_faces/gender_viz/'
+    # im_root_dir = '/Users/amanda/Documents/E_faces/common_lst/'
+    # im_dst_dir = '/Users/amanda/Documents/E_faces/gender_viz/'
 
     # Amanda home pc
     # im_root_dir = '/home/amanda/Documents/cropped_face/e_with_mask/'
     # im_dst_dir = '/home/amanda/Documents/gender_viz/'
+
+    # Amanda office pc
+    im_root_dir = '/home/amanda/Documents/E_faces/common_lst/'
+    im_dst_dir = '/home/amanda/Documents/E_faces/gender_viz/'
 
     print save_dir_key_word
     dst_dir = os.path.join(im_dst_dir, save_dir_key_word)
@@ -454,8 +458,12 @@ def mv_face(gender_match_word, other_criteria_word, other_criteria_value, save_d
 # make_single_prediction_on_2k(feat='sociable', pca_num=320, conv_name='conv52')
 
 # predict_e_new_all()
-mv_face(gender_match_word='female',
-        other_criteria_word='IPO',
-        other_criteria_value=1,
-        save_dir_key_word='female-IPO-success')
+# mv_face(gender_match_word='female',
+#         other_criteria_word='IPO',
+#         other_criteria_value=1,
+#         save_dir_key_word='female-IPO-success')
 
+mv_face(gender_match_word='male',
+        other_criteria_word='success',
+        other_criteria_value=0,
+        save_dir_key_word='male-no-success')
