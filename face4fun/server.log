@@ -353,3 +353,14 @@
 [2018-05-15 14:48:19 -0700] [74386] [CRITICAL] WORKER TIMEOUT (pid:74396)
 [2018-05-15 14:48:19 -0700] [74386] [CRITICAL] WORKER TIMEOUT (pid:74397)
 [2018-05-15 14:48:19 -0700] [74386] [CRITICAL] WORKER TIMEOUT (pid:74398)
+[2018-05-16 22:33:42 +0000] [29635] [ERROR] Error handling request
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/workers/sync.py", line 174, in handle_request
+    resp.write_file(respiter)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 397, in write_file
+    if not self.sendfile(respiter):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/http/wsgi.py", line 387, in sendfile
+    sent += sendfile(sockno, fileno, offset + sent, count)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/http/_sendfile.py", line 67, in sendfile
+    raise OSError(e, os.strerror(e))
+OSError: [Errno 32] Broken pipe
