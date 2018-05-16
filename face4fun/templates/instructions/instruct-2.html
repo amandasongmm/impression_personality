@@ -1,0 +1,118 @@
+{#<div id="container-instructions">#}
+{##}
+{#    <h1>Instructions</h1>#}
+{##}
+{#    <hr />#}
+{##}
+{#    <div class="instructions well">#}
+{##}
+{#        <p>#}
+{#            This is the second page of instructions#}
+{#        </p>#}
+{##}
+{#        <p>#}
+{#            Put some text in this paragraph#}
+{#        </p>#}
+{##}
+{##}
+{#        <script type="text/javascript">#}
+{#        //console.log(psiTurk.getInstructionIndicator())#}
+{#        </script>#}
+{##}
+{#    </div>#}
+{##}
+{#    <hr />#}
+{##}
+{#    <div class="instructionsnav">#}
+{#        <div class="row">#}
+{#            <div class="col-xs-2">#}
+{#                <button type="button" id="prev" value="prev" class="btn btn-primary btn-lg previous">#}
+{#                <span class="glyphicon glyphicon-arrow-left"></span> Previous#}
+{#                </button>#}
+{#            </div>#}
+{#            <div class="col-xs-8">#}
+{#            </div>#}
+{#            <div class="col-xs-2">#}
+{#                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">#}
+{#                Next <span class="glyphicon glyphicon-arrow-right"></span>#}
+{#                </button>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#</div>#}
+<style>
+    * {
+box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+</style>
+
+<div id="container-instructions">
+
+    <h1>Instructions</h1>
+
+    <hr />
+
+    <div class="instructions well">
+
+        <p>
+            Here is another example, <b>most people</b> think the <b>right face</b> looks more trustworthy. So you should choose the <b>right</b> face.
+        </p>
+
+        <p>
+            Press <b>B</b> to choose the <b>right</b> face.
+        </p>
+
+        <div class="row">
+          <div class="column">
+              <img src="https://github.com/amandasongmm/impression_personality/blob/master/static/img/087577_2.0_AE.png?raw=true" alt="Low" style="width:100%">
+
+          </div>
+          <div class="column">
+              <img src="https://github.com/amandasongmm/impression_personality/blob/master/static/img/087577_8.0_AE.png?raw=true" alt="High" style="width:100%">
+
+{#            <img src="../../static/images/087577_8.0_AE.png" alt="High" style="width:100%">#}
+          </div>
+        </div>
+
+
+        <script type="text/javascript">
+        //console.log(psiTurk.getInstructionIndicator())
+        </script>
+
+    </div>
+
+    <hr />
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="prev" value="prev" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
