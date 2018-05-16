@@ -364,3 +364,6 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python2.7/site-packages/gunicorn/http/_sendfile.py", line 67, in sendfile
     raise OSError(e, os.strerror(e))
 OSError: [Errno 32] Broken pipe
+[2018-05-16 23:04:25,591] ERROR in experiment: already_did_exp_hit (1010) {'assignmentId': [u'308Q0PEVBAKXJK2YS1JAWBSSDWMI9R'], 'workerId': [u'A4J4GGMKJ68L0'], 'hitId': [u'3APP19WN72LUJQWBD4BT25SP2MY6GD'], 'mode': [u'live']}
+[2018-05-16 23:44:05,005] ERROR in experiment: hit_not_registered_with_ad_server (1018) {'assignmentId': [u'debug'], 'workerId': [u'None'], 'hitId': [u'debug'], 'mode': [u'live']}
+[2018-05-16 23:44:31 +0000] [29631] [CRITICAL] WORKER TIMEOUT (pid:29635)
