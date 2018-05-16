@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE, mobile, tablet
 allow_repeats = false
 
 [Database Parameters]
-database_url = sqlite:///trustworthy_debug.db
+database_url = sqlite:///trustworthy_amt.db
 table_name = turkdemo
 
 [Server Parameters]
