@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="" />
+    <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/face4fun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face4fun/.psiturk_history" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/.psiturk_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face4fun/participants.db" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/participants.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face4fun/templates/ad.html" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/templates/ad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face4fun/templates/stage.html" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/templates/stage.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,20 +29,7 @@
     <SUITE FILE_PATH="coverage/impression_personality$gen_amt_im_lst.coverage" NAME="gen_amt_im_lst Coverage Results" MODIFIED="1526355029148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gen_amt_im_lst.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/gen_amt_im_lst.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1272">
-              <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -79,6 +72,8 @@
         <option value="$PROJECT_DIR$/pretrain_first_impression/predict_e_funding.py" />
         <option value="$PROJECT_DIR$/pretrain_first_impression/correlation_analysis.py" />
         <option value="$PROJECT_DIR$/utils/gen_amt_im_lst.py" />
+        <option value="$PROJECT_DIR$/face4fun/templates/ad.html" />
+        <option value="$PROJECT_DIR$/face4fun/templates/stage.html" />
       </list>
     </option>
   </component>
@@ -92,10 +87,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="-4" />
-    <option name="width" value="2491" />
-    <option name="height" value="1428" />
+    <option name="x" value="2624" />
+    <option name="y" value="-11" />
+    <option name="width" value="2497" />
+    <option name="height" value="1452" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -115,13 +110,26 @@
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
               <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
+              <item name="face4fun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
+              <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
+              <item name="face4fun" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
               <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
+              <item name="face4fun" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="csv" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
+              <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
+              <item name="face4fun" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
@@ -313,23 +321,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="2497" height="1452" extended-state="6" />
-    <editor active="true" />
+    <frame x="2624" y="-11" width="2497" height="1452" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="right" id="Run" order="7" weight="0.3747495" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="right" id="Run" order="7" weight="0.3747495" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14509018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14509018" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Debug" order="6" weight="0.4012024" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Debug" order="6" weight="0.4012024" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -343,25 +350,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1739479" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Run" order="6" weight="0.40773287" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Debug" order="7" weight="0.5353638" />
       <window_info anchor="right" x="0" y="0" width="793" height="1244" id="Documentation" order="5" side_tool="true" weight="0.32977778" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,39 +383,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py" />
-    <entry file="file://$PROJECT_DIR$/Cleaning/clean_e.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/series.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/indexes/base.py" />
-    <entry file="file://$PROJECT_DIR$/Cleaning/crop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/pretrain_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pretrain_first_impression/transfer_learning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="35" column="67" lean-forward="true" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/pretrain_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -602,16 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/create_clean_data.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pretrain_first_impression/correlation_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,10 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1236">
           <caret line="163" column="56" selection-start-line="163" selection-start-column="56" selection-end-line="163" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#2804#5101#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,22 +594,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1236">
           <caret line="406" selection-start-line="406" selection-end-line="407" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#17194#18458#0" />
-            <element signature="e#25358#26905#0" />
-            <element signature="e#27072#28971#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/gen_amt_im_lst.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1272">
-          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="1238">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/config_aggressive.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/config_trustworthy.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/server.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/templates/ad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="82" column="70" selection-start-line="82" selection-start-column="70" selection-end-line="82" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/static/js/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3780">
+          <caret line="325" column="34" lean-forward="true" selection-start-line="325" selection-start-column="34" selection-end-line="325" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/templates/exp.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/templates/stage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
