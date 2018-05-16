@@ -1,3 +1,24 @@
+<style>
+    * {
+box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+</style>
+
+
 <div id="container-instructions">
 
     <h1>Instructions</h1>
@@ -7,12 +28,24 @@
     <div class="instructions well">
 
         <p>
-            This is the third page of instructions
+            Here is the last example, <b>most people</b> think the <b>left face</b> looks more trustworthy. So you should choose the <b>left</b> face.
         </p>
 
         <p>
-            Put some text in this paragraph
+            Press <b>B</b> to choose the <b>left</b> face.
         </p>
+
+        <div class="row">
+          <div class="column">
+              <img src="https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_trustworthy/087411_8.0_AE.png" alt="Low" style="width:100%">
+
+          </div>
+          <div class="column">
+              <img src="https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_trustworthy/087411_2.0_AE.png" alt="High" style="width:100%">
+
+{#            <img src="../../static/images/087577_8.0_AE.png" alt="High" style="width:100%">#}
+          </div>
+        </div>
 
 
         <script type="text/javascript">
