@@ -1,0 +1,48 @@
+[HIT Configuration]
+title = Compare Face Trustworthiness Level
+description = Choose who looks more trustworthy in face pairs
+amt_keywords = Perception, Psychology
+lifetime = 24
+us_only = true
+approve_requirement = 50
+contact_email_on_error = feijuejuanling@gmail.com
+ad_group = First impression judgment
+psiturk_keywords = first impression
+organization_name = University of California, San Diego
+browser_exclude_rule = MSIE, mobile, tablet
+allow_repeats = false
+
+[Database Parameters]
+database_url = sqlite:///trustworthy.db
+table_name = turkdemo
+
+[Server Parameters]
+host = 0.0.0.0
+port = 22362
+cutoff_time = 30
+logfile = server.log
+loglevel = 2
+debug = true
+login_username = examplename
+login_pw = examplepassword
+threads = auto
+secret_key = 'this is my secret key which is hard to guess, i should change this'
+#certfile = <path_to.crt>
+#keyfile = <path_to.key>
+#adserver_revproxy_host = www.location.of.your.revproxy.sans.protocol.com
+#adserver_revproxy_port = 80 # defaults to 80
+
+[Task Parameters]
+experiment_code_version = 1.0
+num_conds = 1
+num_counters = 1
+
+[Shell Parameters]
+launch_in_sandbox_mode = true
+
+# If you are not using the psiturk ad server, set `use_psiturk_ad_server` to `false` and point `ad_location` to your proxy server <host> and <port>. Format the ad_location like this:
+#
+#   https://<host>:<port>/ad
+
+use_psiturk_ad_server = true
+ad_location = false
