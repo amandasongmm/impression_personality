@@ -11,10 +11,19 @@ pd.options.mode.chained_assignment = None  # default='warn'
 # generate list for trustworthy only.
 
 
-def gen_attr_lst(attr):
-    im_pub_dir = 'https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_'+attr + '/'
-    generated_img_lst = '../static/csv/'+attr+'_gen.csv'
-    real_img_lst = '../static/csv/'+attr+'_ground_truth.csv'
+def gen_attr_lst(attr, stargan):
+    if stargan:
+        im_pub_dir_prefix = 'https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_stargan_'
+    else:
+        im_pub_dir_prefix = 'https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_'
+
+    im_pub_dir = im_pub_dir_prefix + attr + '/'
+    if stargan:
+        generated_img_lst = '../static/csv/stargan_' + attr + '_gen.csv'
+        real_img_lst = '../static/csv/stargan_' + attr + '_ground_truth.csv'
+    else:
+        generated_img_lst = '../static/csv/'+attr+'_gen.csv'
+        real_img_lst = '../static/csv/'+attr+'_ground_truth.csv'
 
     gen_im_df = pd.read_csv(generated_img_lst)
     real_im_df = pd.read_csv(real_img_lst)
@@ -25,7 +34,7 @@ def gen_attr_lst(attr):
     gen_im_df['pair_ind'] = gen_im_df.index
 
     random.seed(3)
-    rep_total = 20
+    rep_total = 10
     gen_orig_len = len(gen_im_df)
     gen_new_len = gen_orig_len + rep_total
 
@@ -80,7 +89,10 @@ def gen_attr_lst(attr):
 
     txt_save_name = attr + '_shuffled_img_lst.txt'
     csv_save_name = attr + '_shuffled_img_lst.csv'
-    save_dir = '../static/csv/SAGAN_'
+    if stargan == 1:
+        save_dir = '../static/csv/stargan_'
+    else:
+        save_dir = '../static/csv/SAGAN_'
 
     with open(save_dir + txt_save_name, 'w') as file_handler:
         for item in test_lst:
@@ -89,5 +101,7 @@ def gen_attr_lst(attr):
     new_merge_df.to_csv(save_dir+csv_save_name, index=False)
 
 
-# gen_attr_lst(attr='trustworthy')
-gen_attr_lst(attr='aggressive')
+# gen_attr_lst(attr='trustworthy', stargan=0)
+# gen_attr_lst(attr='aggressive', stargan=0)
+# gen_attr_lst(attr='trustworthy', stargan=1)
+# gen_attr_lst(attr='aggressive', stargan=1)
