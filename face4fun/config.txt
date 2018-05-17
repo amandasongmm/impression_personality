@@ -1,5 +1,5 @@
 [HIT Configuration]
-title = Face Aggressiveness (star)
+title = Face Trustworthy (star)
 description = Choose who looks more aggressive in face pairs
 amt_keywords = Perception, Psychology
 lifetime = 24
@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE, mobile, tablet
 allow_repeats = false
 
 [Database Parameters]
-database_url = sqlite:///stargan_aggressive_amt.db
+database_url = sqlite:///stargan_trustworthy_amt.db
 table_name = turkdemo
 
 [Server Parameters]
