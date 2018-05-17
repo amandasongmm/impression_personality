@@ -385,3 +385,273 @@ OSError: [Errno 32] Broken pipe
 [2018-05-16 22:56:58 +0000] [30701] [CRITICAL] WORKER TIMEOUT (pid:30731)
 [2018-05-16 22:56:58 +0000] [30701] [CRITICAL] WORKER TIMEOUT (pid:30708)
 [2018-05-16 22:56:58 +0000] [30701] [CRITICAL] WORKER TIMEOUT (pid:30709)
+[2018-05-17 06:12:09 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:31910)
+[2018-05-17 06:12:41 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:31912)
+[2018-05-17 06:12:54,162] ERROR in app: Exception on /apple-touch-icon-120x120.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon-120x120.png
+[2018-05-17 06:12:54,481] ERROR in app: Exception on /apple-touch-icon.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon.png
+[2018-05-17 06:12:54,726] ERROR in app: Exception on /apple-touch-icon-120x120.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon-120x120.png
+[2018-05-17 06:12:54,952] ERROR in app: Exception on /apple-touch-icon.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon.png
+[2018-05-17 06:12:58,241] ERROR in app: Exception on /apple-touch-icon-120x120.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon-120x120.png
+[2018-05-17 06:12:58,496] ERROR in app: Exception on /apple-touch-icon.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon.png
+[2018-05-17 06:12:58,786] ERROR in app: Exception on /apple-touch-icon-120x120.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon-120x120.png
+[2018-05-17 06:12:59,013] ERROR in app: Exception on /apple-touch-icon.png [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: apple-touch-icon.png
+[2018-05-17 06:14:39 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:31964)
+[2018-05-17 06:15:37 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:31966)
+[2018-05-17 06:17:16 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:32281)
+[2018-05-17 06:27:31 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:31909)
+[2018-05-17 06:27:36 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:31962)
+[2018-05-17 06:28:06 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:32286)
+[2018-05-17 06:28:45 +0000] [31905] [CRITICAL] WORKER TIMEOUT (pid:32449)
+[2018-05-17 06:37:33,513] ERROR in app: Exception on /robots.txt [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 724, in regularpage
+    return render_template(pagename)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: robots.txt
