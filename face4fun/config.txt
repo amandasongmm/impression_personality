@@ -1,6 +1,6 @@
 [HIT Configuration]
-title = Face Trustworthy (star)
-description = Choose who looks more aggressive in face pairs
+title = Responsible Face
+description = Choose who looks more responsible in face pairs
 amt_keywords = Perception, Psychology
 lifetime = 24
 us_only = true
@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE, mobile, tablet
 allow_repeats = false
 
 [Database Parameters]
-database_url = sqlite:///stargan_trustworthy_amt.db
+database_url = sqlite:///responsible_amt.db
 table_name = turkdemo
 
 [Server Parameters]
