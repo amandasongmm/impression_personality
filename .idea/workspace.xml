@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/face4fun/SAGAN_aggressive_amt.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/face4fun/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face4fun/eventdata.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/face4fun/gen_im_lst.py" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/gen_im_lst.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face4fun/questiondata.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/face4fun/static/js/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/static/js/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face4fun/trialdata.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,15 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="task.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/face4fun/static/js/task.js">
+      <file leaf-file-name="config.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/face4fun/config.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#34018#72667#0" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -116,8 +106,8 @@
         <option value="$PROJECT_DIR$/face4fun/static/js/task_trustworthy.js" />
         <option value="$PROJECT_DIR$/face4fun/static/js/task_aggressive.js" />
         <option value="$PROJECT_DIR$/face4fun/gen_im_lst.py" />
-        <option value="$PROJECT_DIR$/face4fun/config.txt" />
         <option value="$PROJECT_DIR$/face4fun/static/js/task.js" />
+        <option value="$PROJECT_DIR$/face4fun/config.txt" />
       </list>
     </option>
   </component>
@@ -682,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/face4fun/config.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/face4fun/config_aggressive.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -705,12 +688,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/face4fun/static/js/task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="622">
+          <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#34018#72667#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face4fun/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
         </state>
       </provider>
     </entry>
