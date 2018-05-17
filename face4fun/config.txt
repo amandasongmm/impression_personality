@@ -1,6 +1,6 @@
 [HIT Configuration]
-title = Compare Face Trustworthiness Level
-description = Choose who looks more trustworthy in face pairs
+title = Face Aggressiveness
+description = Choose who looks more aggressive in face pairs
 amt_keywords = Perception, Psychology
 lifetime = 24
 us_only = true
@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE, mobile, tablet
 allow_repeats = false
 
 [Database Parameters]
-database_url = sqlite:///trustworthy_amt.db
+database_url = sqlite:///SAGAN_aggressive_amt.db
 table_name = turkdemo
 
 [Server Parameters]

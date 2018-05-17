@@ -11,12 +11,12 @@ pd.options.mode.chained_assignment = None  # default='warn'
 # generate list for trustworthy only.
 
 
-def gen_attr_lst(attr='trustworthy'):
-    git_folder = 'https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_'+attr + '/'
-    gen_img_lst = '../static/csv/trustworthy_gen.csv'
-    real_img_lst = '../static/csv/trustworthy_groundtruth.csv'
+def gen_attr_lst(attr):
+    im_pub_dir = 'https://raw.githubusercontent.com/amandasongmm/impression_personality/master/static/amt_'+attr + '/'
+    generated_img_lst = '../static/csv/'+attr+'_gen.csv'
+    real_img_lst = '../static/csv/'+attr+'_ground_truth.csv'
 
-    gen_im_df = pd.read_csv(gen_img_lst)
+    gen_im_df = pd.read_csv(generated_img_lst)
     real_im_df = pd.read_csv(real_img_lst)
 
     gen_im_df.columns = ['im1_name', 'im2_name', 'Task type']
@@ -28,6 +28,8 @@ def gen_attr_lst(attr='trustworthy'):
     rep_total = 20
     gen_orig_len = len(gen_im_df)
     gen_new_len = gen_orig_len + rep_total
+
+    # add some repetition to the generated images.
     rep_lst = random.sample(range(0, len(gen_im_df)), rep_total)
 
     for count, ind in enumerate(rep_lst):
@@ -36,6 +38,7 @@ def gen_attr_lst(attr='trustworthy'):
     gen_im_df['rep'] = 0
     gen_im_df['rep'].iloc[gen_orig_len:gen_new_len] = 1
 
+    # the original order of the real_im_df.
     real_im_df.columns = ['more', 'less']
     # change the order of the columns.
     real_im_df = real_im_df[['less', 'more']]
@@ -61,11 +64,11 @@ def gen_attr_lst(attr='trustworthy'):
         if rand_lst[index] == 0:
             merge_df['im1'].iloc[index] = '1'
             merge_df['im2'].iloc[index] = '0'
-            merge_df['im1_name'].iloc[index] = git_folder+im2_name
-            merge_df['im2_name'].iloc[index] = git_folder+im1_name
+            merge_df['im1_name'].iloc[index] = im_pub_dir+im2_name
+            merge_df['im2_name'].iloc[index] = im_pub_dir+im1_name
         else:
-            merge_df['im1_name'].iloc[index] = git_folder+im1_name
-            merge_df['im2_name'].iloc[index] = git_folder+im2_name
+            merge_df['im1_name'].iloc[index] = im_pub_dir+im1_name
+            merge_df['im2_name'].iloc[index] = im_pub_dir+im2_name
 
     # shuffle the row orders.
     new_merge_df = merge_df.sample(frac=1, random_state=1)
@@ -77,7 +80,7 @@ def gen_attr_lst(attr='trustworthy'):
 
     txt_save_name = attr + '_shuffled_img_lst.txt'
     csv_save_name = attr + '_shuffled_img_lst.csv'
-    save_dir = '../static/csv/'
+    save_dir = '../static/csv/SAGAN_'
 
     with open(save_dir + txt_save_name, 'w') as file_handler:
         for item in test_lst:
@@ -86,4 +89,5 @@ def gen_attr_lst(attr='trustworthy'):
     new_merge_df.to_csv(save_dir+csv_save_name, index=False)
 
 
-gen_attr_lst()
+# gen_attr_lst(attr='trustworthy')
+gen_attr_lst(attr='aggressive')
