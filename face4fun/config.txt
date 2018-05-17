@@ -1,6 +1,6 @@
 [HIT Configuration]
-title = Responsible Face
-description = Choose who looks more responsible in face pairs
+title = Emotional Face
+description = Choose who looks more emotional in face pairs
 amt_keywords = Perception, Psychology
 lifetime = 24
 us_only = true
@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE, mobile, tablet
 allow_repeats = false
 
 [Database Parameters]
-database_url = sqlite:///responsible_amt.db
+database_url = sqlite:///emotional_amt.db
 table_name = turkdemo
 
 [Server Parameters]

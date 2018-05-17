@@ -175,4 +175,5 @@ def gen_from_one_df(attr):
 # gen_attr_lst(attr='aggressive', stargan=1)
 
 
-gen_from_one_df('responsible')
+# gen_from_one_df('responsible')
+gen_from_one_df('emotional')
