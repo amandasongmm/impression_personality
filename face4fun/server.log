@@ -655,3 +655,22 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/templating.py", line 85, in _get_source_fast
     raise TemplateNotFound(template)
 TemplateNotFound: robots.txt
+[2018-05-17 07:46:39 +0000] [32699] [CRITICAL] WORKER TIMEOUT (pid:32705)
+[2018-05-17 07:47:03,843] ERROR in experiment: DB error: Unique user not found.
+[2018-05-17 07:47:03,843] ERROR in app: Exception on /sync/A6UFJ075UVPVS%3A3U088ZLJVM0XOLYQHM4W4R07P49W0L [GET]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python2.7/site-packages/psiturk/experiment.py", line 546, in load
+    "condition": user.cond,
+UnboundLocalError: local variable 'user' referenced before assignment
+[2018-05-17 07:47:05,399] ERROR in experiment: already_started_exp (1008) {'assignmentId': [u'3ZSY5X72NZIDJ69NKDW17TO8VTGOR8'], 'workerId': [u'A31681CCEVDIH3'], 'hitId': [u'3YD0MU1NC38CDZXDAEOBCXHIZ38A79'], 'mode': [u'live']}
+[2018-05-17 08:03:34 +0000] [32699] [CRITICAL] WORKER TIMEOUT (pid:32703)
