@@ -367,3 +367,8 @@ OSError: [Errno 32] Broken pipe
 [2018-05-16 23:04:25,591] ERROR in experiment: already_did_exp_hit (1010) {'assignmentId': [u'308Q0PEVBAKXJK2YS1JAWBSSDWMI9R'], 'workerId': [u'A4J4GGMKJ68L0'], 'hitId': [u'3APP19WN72LUJQWBD4BT25SP2MY6GD'], 'mode': [u'live']}
 [2018-05-16 23:44:05,005] ERROR in experiment: hit_not_registered_with_ad_server (1018) {'assignmentId': [u'debug'], 'workerId': [u'None'], 'hitId': [u'debug'], 'mode': [u'live']}
 [2018-05-16 23:44:31 +0000] [29631] [CRITICAL] WORKER TIMEOUT (pid:29635)
+[2018-05-17 01:23:21 +0000] [30559] [CRITICAL] WORKER TIMEOUT (pid:30563)
+[2018-05-17 01:23:21 +0000] [30559] [CRITICAL] WORKER TIMEOUT (pid:30566)
+[2018-05-17 01:23:23 +0000] [30559] [CRITICAL] WORKER TIMEOUT (pid:30564)
+[2018-05-17 01:25:50 +0000] [30559] [CRITICAL] WORKER TIMEOUT (pid:30585)
+[2018-05-17 01:26:13,970] ERROR in experiment: already_started_exp (1008) {'assignmentId': [u'3LYA37P8ISU7D87JQOII0X2VT03KB3'], 'workerId': [u'A3L4JI1S352HB8'], 'hitId': [u'3YLTXLH3DGDGTS9RC6SKT5V7CRCHP4'], 'mode': [u'live']}
