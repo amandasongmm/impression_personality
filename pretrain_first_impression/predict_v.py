@@ -26,6 +26,9 @@ def filter_crop_valid_face():
     vc_cropped_dir = '/home/amanda/Documents/cropped_v/'
     vc_cropped_valid_dir = '/home/amanda/Documents/cropped_v_valid/'
 
+    if not os.path.exists(vc_cropped_dir):
+        os.makedirs(vc_cropped_dir)
+
     filenames = os.listdir(vc_cropped_dir)
     num_files = len(filenames)
 
