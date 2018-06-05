@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/face4fun/emotional_amt.db" beforeDir="false" afterPath="$PROJECT_DIR$/face4fun/emotional_amt.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipeline/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrain_first_impression/my_canvas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pretrain_first_impression/my_canvas.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +32,11 @@
       <file leaf-file-name="pipeline.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pipeline/pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1423">
-              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="480">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#3575#5418#0" />
+                <element signature="e#3631#5463#0" />
+                <element signature="e#2434#5650#0" />
               </folding>
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="add_mask.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cleaning/add_mask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
+            <state relative-caret-position="72">
               <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="32" />
               <folding>
                 <element signature="e#145#1194#0" />
@@ -158,6 +158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,7 +180,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,23 +361,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="3377" height="1452" extended-state="6" />
+    <frame x="64" y="-11" width="2497" height="1452" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="right" id="Run" order="7" weight="0.32682487" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="right" id="Run" order="7" weight="0.32682487" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12225894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12224449" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Debug" order="6" weight="0.33643737" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Debug" order="6" weight="0.33643737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -391,25 +391,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1739479" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Run" order="6" weight="0.40773287" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
       <window_info anchor="right" id="Debug" order="7" weight="0.5353638" />
       <window_info anchor="right" x="0" y="0" width="793" height="1244" id="Documentation" order="5" side_tool="true" weight="0.32977778" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,13 +424,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Cleaning/add_mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#145#1194#0" />
+            <element signature="e#1228#1818#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pipeline/pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2926">
           <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#3575#5418#0" />
+            <element signature="e#3631#5463#0" />
+            <element signature="e#2434#5650#0" />
           </folding>
         </state>
       </provider>
@@ -563,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cleaning/add_mask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
+        <state relative-caret-position="72">
           <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="32" />
           <folding>
             <element signature="e#145#1194#0" />
@@ -574,11 +585,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pipeline/pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1423">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="480">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#3575#5418#0" />
+            <element signature="e#3631#5463#0" />
+            <element signature="e#2434#5650#0" />
           </folding>
         </state>
       </provider>
