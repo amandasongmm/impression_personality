@@ -419,7 +419,7 @@ def merge_api_with_prediction():
                  'neutral', 'sadness', 'surprise']]
     print('Length of original API data is {}'.format(len(api_data)))
 
-    # keep only one photo for each person. If both cb and tw are avaiable, choose cb.
+    # keep only one photo for each person. If both cb and tw are available, choose cb.
     api_img_lst = api_data['img_name'].values
     id_lst = [f[:-7] for f in api_img_lst]
     uni_id_lst = set(id_lst)  # unique lsit of e id.
