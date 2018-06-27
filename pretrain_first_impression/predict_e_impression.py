@@ -39,7 +39,7 @@ class Vgg16Model:
         self.conv1_2 = self.conv2d(self.conv1_1, 'conv1_2', 64, trainable)
 
         # max-pooling is performed over a 2x2 pixel window, with stride 2.
-        self.max_pool1 = tf.layers.max_pooling2d(self.conv1_1, (2, 2), (2, 2), padding=self.pool_padding)
+        self.max_pool1 = tf.layers.max_pooling2d(self.conv1_2, (2, 2), (2, 2), padding=self.pool_padding)
 
         self.conv2_1 = self.conv2d(self.max_pool1, 'conv2_1', 128, trainable)
         self.conv2_2 = self.conv2d(self.conv2_1, 'conv2_2', 128, trainable)
