@@ -17,6 +17,10 @@ from sklearn.multioutput import MultiOutputRegressor
 from shutil import copyfile
 from scipy.stats import ttest_ind
 
+import matplotlib
+import matplotlib.pyplot as plt
+
+
 default_device = '/gpu:0'
 num_hidden_neurons = 256
 
@@ -42,7 +46,7 @@ class Vgg16Model:
         self.conv1_2 = self.conv2d(self.conv1_1, 'conv1_2', 64, trainable)
 
         # max-pooling is performed over a 2x2 pixel window, with stride 2
-        self.max_pool1 = tf.layers.max_pooling2d(self.conv1_2, (2, 2), (2, 2), padding=self.pool_padding)
+        self.max_pool1 = tf.layers.max_pooling2d(self.conv1_1, (2, 2), (2, 2), padding=self.pool_padding)
 
         self.conv2_1 = self.conv2d(self.max_pool1, 'conv2_1', 128, trainable)
         self.conv2_2 = self.conv2d(self.conv2_1, 'conv2_2', 128, trainable)
@@ -180,6 +184,10 @@ def extract_2k_feat():
     extract_features(img_dir=img_dir, file_names=file_names, feat_save_dir=feat_save_dir, feat_prefix='2kface',
                      batch_size=batch_size)
 
+    # extract_features(img_dir=img_dir, file_names=file_names, feat_save_dir=feat_save_dir, feat_prefix='2kface_with_bug_',
+    #                  batch_size=batch_size)
+
+
 
 # specific function
 def extract_vc_feat():
@@ -305,7 +313,8 @@ def repeat_split(layer_name, linspace_start, linspace_end):
     valid_img_lst = np.load(os.path.join(feat_save_dir, valid_img_file_name))
 
     # load extracted features
-    feature_file_name = os.path.join(feat_save_dir, '2kface_'+layer_name+'.npy')
+    # feature_file_name = os.path.join(feat_save_dir, '2kface_'+layer_name+'.npy')
+    feature_file_name = os.path.join(feat_save_dir, '2kface_with_bug__'+layer_name+'.npy')
     feat_arr = np.load(feature_file_name)  # 2200 * 100352, for example.
 
     # load selected impression traits.
@@ -386,23 +395,149 @@ def repeat_split(layer_name, linspace_start, linspace_end):
             itr_count += 1
 
         print('total time = {}'.format(time.time() - start_t))
+    # performance_save_name = 'tmp_data/'+layer_name+'_2k_performance_'+str(linspace_start)+'-'+str(linspace_end)+'.csv'
+    performance_save_name = 'tmp_data/'+layer_name+'_2k_performance_with_bug_'+str(linspace_start)+'-'+str(linspace_end)+'.csv'
+    performance_df.to_csv(performance_save_name)
 
-    performance_df.to_csv('tmp_data/'+layer_name+'_2k_performance_'+str(linspace_start)+'-'+str(linspace_end)+'.csv')
+    # print out the performance results.
+    # df = pd.read_csv(performance_save_name, index_col=0)
+    # for feat_num in range(1, 7):
+    #     att = df[['rand_num', 'pca_num', 'imp' + str(feat_num), 'train' + str(feat_num), 'test' + str(feat_num)]]
+    #     print(att.loc[0]['imp' + str(feat_num)])
+    #     for i in np.linspace(linspace_start, linspace_end, linspace_pt_num, dtype=int):
+    #         print('cur lay = {}, cur pca = {}, train, test cor = {:.2f}, {:.2f}'.format(layer_name, i,
+    #                             att[att['pca_num'] == str(i)]['train' + str(feat_num)].mean(),
+    #                             att[att['pca_num'] == str(i)]['test' + str(feat_num)].mean()))
 
-    for feat_num in range(1, 7):
-        att = performance_df[['rand_num', 'pca_num', 'imp' + str(feat_num), 'train' + str(feat_num), 'test' + str(feat_num)]]
-        print(att.loc[0]['imp' + str(feat_num)])
-        for i in np.linspace(linspace_start, linspace_end, linspace_pt_num, dtype=int):
-            print('cur lay = {}, cur pca = {}, train, test cor = {:.2f}, {:.2f}'.format(layer_name, i,
-                                att[att['pca_num'] == str(i)]['train' + str(feat_num)].mean(),
-                                att[att['pca_num'] == str(i)]['test' + str(feat_num)].mean()))
+
+def visualize(layer_name, start_num, end_num, feat_num):
+    # file_name = 'tmp_data/{}_2k_performance_{}-{}.csv'.format(layer_name, start_num, end_num)
+    file_name = 'tmp_data/{}_2k_performance_with_bug_{}-{}.csv'.format(layer_name, start_num, end_num)
+    df = pd.read_csv(file_name, index_col=0)
+    att = df[['rand_num', 'pca_num', 'imp' + str(feat_num), 'train' + str(feat_num), 'test' + str(feat_num)]]
+    feat_name = att.loc[0]['imp' + str(feat_num)]
+    y_train, y_train_err, y_test, y_test_err = [], [], [], []
+    pt_num = (end_num-start_num)/10+1
+    x = np.linspace(start_num, end_num, pt_num)
+    for i in x:
+        y_train.append(att[att['pca_num'] == i]['train' + str(feat_num)].mean())
+        y_train_err.append(att[att['pca_num'] == i]['train' + str(feat_num)].std())
+        y_test.append(att[att['pca_num'] == i]['test' + str(feat_num)].mean())
+        y_test_err.append(att[att['pca_num'] == i]['test' + str(feat_num)].std())
+
+    max_y_test = round(max(y_test), 2)
+    max_y_correspond_x = x[np.argmax(y_test)]
+
+    fig_title = '{}-{}-pca{}-test-{}'.format(layer_name, feat_name, max_y_correspond_x, max_y_test)
+
+    plt.errorbar(x, y_train, y_train_err, label='train')
+    plt.errorbar(x, y_test, y_test_err, label='test')
+    plt.grid()
+    plt.title(fig_title)
+    # plt.show()
+    print(fig_title)
+    print('/n')
+    plt.savefig('im_dir/' + fig_title + '_with_bug.jpg')
+    plt.close()
+    return
+
+
+def experiment_on_merging_3_layers():
+    "Conclusion: it doesn't help."
+    start_t = time.time()
+
+    # load valid img lst.
+    valid_img_file_name = '2kface_valid_img_lst.npy'
+    valid_img_lst = np.load(os.path.join(feat_save_dir, valid_img_file_name))
+
+    # load selected impression traits.
+    select_rating_path = 'tmp_data/selected_score.pkl'
+    rating_df = pd.read_pickle(select_rating_path)
+
+    filtered_rating_df = rating_df[rating_df['Filename'].isin(valid_img_lst)]
+    filtered_rating_df = filtered_rating_df.set_index('Filename')
+    filtered_rating_df = filtered_rating_df.loc[valid_img_lst]
+
+    feature_lst = ['trustworthy', 'intelligent', 'attractive', 'aggressive', 'responsible', 'sociable']
+    rating_arr = filtered_rating_df.as_matrix()
+
+    # load extracted features
+    feature_file_name = os.path.join(feat_save_dir, '2kface_conv51.npy')
+    feat_arr1 = np.load(feature_file_name)  # 2200 * 100352, for example.
+    feature_file_name = os.path.join(feat_save_dir, '2kface_conv52.npy')
+    feat_arr2 = np.load(feature_file_name)
+    feature_file_name = os.path.join(feat_save_dir, '2kface_conv53.npy')
+    feat_arr3 = np.load(feature_file_name)
+
+    pca_keep_dim = 100
+    test_ratio = 0.2
+
+    print('pca on conv51')
+    pca = PCA(n_components=pca_keep_dim)
+    pca.fit(feat_arr1)
+    feat1_pca = pca.transform(feat_arr1)
+
+    print('pca on conv52')
+    pca.fit(feat_arr2)
+    feat2_pca = pca.transform(feat_arr2)
+
+    print('pca on conv53')
+    pca.fit(feat_arr3)
+    feat3_pca = pca.transform(feat_arr3)
+
+    feat_merge = np.concatenate((feat1_pca, feat2_pca), axis=1)
+    feat_merge = np.concatenate((feat_merge, feat3_pca), axis=1)
+
+    x_train, x_test, y_train, y_test = train_test_split(feat_merge, rating_arr, test_size=test_ratio, random_state=42)
+
+    # multi_regressor = MultiOutputRegressor(Ridge())
+    multi_regressor = MultiOutputRegressor(LinearRegression())
+
+    multi_regressor.fit(x_train, y_train)
+
+    # predict on training data
+    y_train_predict = multi_regressor.predict(x_train)
+
+    # predict on test data
+    y_test_predict = multi_regressor.predict(x_test)
+
+    # compare performance
+    rating_names = ['trustworthy', 'intelligent', 'attractive', 'aggressive', 'responsible', 'sociable']
+    for ind, cur_name in enumerate(rating_names):
+        line = 'Cur impression: {}\n'.format(cur_name)
+
+        # print(line)
+        train_gt = y_train[:, ind]
+        train_pred = y_train_predict[:, ind]
+        [train_cor, p] = pearsonr(train_gt, train_pred)
+
+        test_gt = y_test[:, ind]
+        test_pred = y_test_predict[:, ind]
+        [test_cor, p] = pearsonr(test_gt, test_pred)
+        line = 'train cor {}, test cor = {}\n\n'.format(train_cor, test_cor)
+        print(line)
+
+    print('Time elapsed = {:.2f}'.format(time.time() - start_t))
+
+    return
 
 
 # extract_2k_feat()
 # extract_vc_feat()
 # split_on_2k()
 # pca_and_regression_on_2k()
-# repeat_split(layer_name='conv52')
-# repeat_split(layer_name='conv51')
-repeat_split(layer_name='conv52', linspace_start=150, linspace_end=350)
+# repeat_split(layer_name='conv51', linspace_start=150, linspace_end=350)
+# repeat_split(layer_name='conv52', linspace_start=150, linspace_end=350)
+# repeat_split(layer_name='conv53', linspace_start=150, linspace_end=350)
 
+
+for feat_num in range(1, 7):
+    visualize('conv51', 150, 350, feat_num)
+
+for feat_num in range(1, 7):
+    visualize('conv52', 150, 350, feat_num)
+
+for feat_num in range(1, 7):
+    visualize('conv53', 150, 350, feat_num)
+
+# experiment_on_merging_3_layers()
