@@ -12,8 +12,7 @@ api_data.columns = ["faceId", "faceTopDimension", "faceLeftDimension", "faceWidt
                     "blurvalue", "exposurelevel", "exposurevalue", "noiselevel", "noisevalue", "eymakeup", "lipmakeup",
                     "foreheadoccluded", "eyeoccluded", "mouthoccluded", "hair-bald", "hair-invisible", "img_name"]
 api_data = api_data.drop(api_data.index[0])
-api_data = api_data[['img_name', 'smile', 'gender', 'age', 'glasses', 'anger', 'contempt', 'disgust', 'fear', 'happiness',
-                 'neutral', 'sadness', 'surprise']]
+api_data = api_data[['img_name', 'gender', 'age']]
 api_data = api_data.drop_duplictates()  # there are some repetitive images.
 
 print('Length of original API data is {}'.format(len(api_data)))
