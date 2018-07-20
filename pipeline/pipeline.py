@@ -245,7 +245,6 @@ def sort_face(crop_with_mask_dir=crop_with_mask_dir,
             vc_filter_df['cb_img_exist'].loc[i] = 1
             img_full_path = crop_with_mask_dir + cb_file
             vc_filter_df['cb_img_path'].loc[i] = img_full_path
-
             img = cv2.imread(img_full_path)
             vc_filter_df['cb_shape'].loc[i] = img.shape[:2]
             residual = np.mean(img, axis=2) - img[:, :, 0]
