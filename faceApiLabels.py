@@ -4,6 +4,7 @@ import cv2
 import glob
 import time
 import csv
+
 i=0
 file = open("ent-details.txt", "w") 
 file.write("faceId"+ "\t"+"faceTopDimension"+ "\t"+"faceLeftDimension"+ "\t"+"faceWidthDimension"+ "\t"+ "faceHeightDimension"+ "\t"+"Smile"+ "\t"+"pitch"+ "\t"+"roll"+ "\t"+"yaw"+ "\t"+"gender"+"\t"+"age"+"\t"+"moustache"+ "\t"+"beard"+ "\t"+"sideburns"+ "\t"+"glasses"+ "\t"+"anger"+ "\t"+"contempt"+ "\t"+"disgust"+ "\t"+"fear"+ "\t"+"hapiness"+ "\t"+"neutral"+ "\t"+"sadness"+ "\t"+"surprise"+ "\t"+"blurlevel"+ "\t"+"blurvalue"+ "\t"+"exposurelevel"+ "\t"+"exposurevalue"+ "\t"+"noiselevel"+ "\t"+"noisevalue"+ "\t"+"eymakeup"+ "\t"+"lipmakeup"+ "\t"+"foreheadoccluded"+ "\t"+"eyeoccluded"+ "\t"+"mouthoccluded"+ "\t"+"hair-bald"+ "\t"+"hair-invisible"+ "\t"+"img_name"+ "\t"+"\n")
