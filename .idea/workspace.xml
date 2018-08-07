@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e3d40fe-61cf-48a6-a500-854bac0cbb67" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pretrain_first_impression/home_variance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/face_recognition/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/face_recognition/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/face_recognition/face_detection_cli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/face_recognition/face_recognition_cli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/inception_resnet_v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/predict_age_gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/weights.18-4.06.hdf5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/age_gender_impression_pipeline/wide_resnet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/pipeline_canvas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/pipeline_canvas.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,18 +40,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home_variance.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pretrain_first_impression/home_variance.py">
+      <file leaf-file-name="predict_age_gen.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/predict_age_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+            <state relative-caret-position="288">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="e#3309#7000#0" />
-                <element signature="e#7068#7244#0" />
-                <element signature="e#7352#9493#0" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inception_resnet_v1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/inception_resnet_v1.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -80,6 +91,7 @@
       <find>load_im</find>
       <find>load_image</find>
       <find>model_save_dir</find>
+      <find>predict</find>
     </findStrings>
     <replaceStrings>
       <replace>aggressive</replace>
@@ -137,6 +149,8 @@
         <option value="$PROJECT_DIR$/faceApiLabels.py" />
         <option value="$PROJECT_DIR$/pretrain_first_impression/predict_vc_with_conv52_with_bug.py" />
         <option value="$PROJECT_DIR$/pretrain_first_impression/home_variance.py" />
+        <option value="$PROJECT_DIR$/age_gender_impression_pipeline/wide_resnet.py" />
+        <option value="$PROJECT_DIR$/age_gender_impression_pipeline/predict_age_gen.py" />
       </list>
     </option>
   </component>
@@ -149,11 +163,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="1752" />
-    <option name="y" value="24" />
-    <option name="width" value="1688" />
-    <option name="height" value="1416" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2625" />
+    <option name="y" value="-4" />
+    <option name="width" value="2495" />
+    <option name="height" value="1444" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -163,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,24 +188,18 @@
             <path>
               <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
               <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrain_first_impression" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="impression_personality" type="b2602c69:ProjectViewProjectNode" />
-              <item name="impression_personality" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="age_gender_impression_pipeline" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../face_recognition" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -204,6 +213,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/age_gender_impression_pipeline" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pretrain_first_impression/tmp_data" />
     </key>
@@ -366,23 +378,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1752" y="24" width="1688" height="1416" extended-state="4" />
+    <frame x="2625" y="-4" width="2495" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.32934132" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="right" id="Run" order="7" weight="0.81546897" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
-      <window_info anchor="right" id="Run" order="7" weight="0.81546897" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20219246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14388777" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Debug" order="6" weight="0.20601203" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -396,25 +408,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1739479" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Run" order="6" weight="0.40773287" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
       <window_info anchor="right" id="Debug" order="7" weight="0.5353638" />
       <window_info anchor="right" x="0" y="0" width="793" height="1244" id="Documentation" order="5" side_tool="true" weight="0.32977778" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.33607784" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,17 +441,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/skimage/io/_plugins/pil_plugin.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="1408" selection-start-line="1408" selection-end-line="1408" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/face4fun/server.log" />
-    <entry file="file://$PROJECT_DIR$/face4fun/templates/default.html" />
-    <entry file="file://$PROJECT_DIR$/face4fun/templates/thanks.html" />
     <entry file="file://$PROJECT_DIR$/face4fun/templates/error.html" />
     <entry file="file://$PROJECT_DIR$/face4fun/templates/exp.html" />
     <entry file="file://$PROJECT_DIR$/face4fun/templates/postquestionnaire.html" />
@@ -602,13 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-86">
           <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#950#4641#0" />
-            <element signature="e#4709#4885#0" />
-            <element signature="e#4993#7134#0" />
-            <element signature="e#11443#14415#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,9 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,10 +617,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/face_recognition/docs/conf.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/face_recognition/api.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/wide_resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="132" column="68" selection-start-line="132" selection-start-column="61" selection-end-line="132" selection-end-column="68" />
           <folding>
-            <element signature="e#3309#7000#0" />
-            <element signature="e#7068#7244#0" />
-            <element signature="e#7352#9493#0" />
+            <element signature="e#100#114#0" expanded="true" />
+            <element signature="e#571#1109#0" />
+            <element signature="e#1246#3901#0" />
+            <element signature="e#4036#4280#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/inception_resnet_v1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/age_gender_impression_pipeline/predict_age_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
