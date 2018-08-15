@@ -146,6 +146,8 @@ class WideResNet:
 def main():
     model = WideResNet(64)()
     model.summary()
+    # # My added.
+    # K.clear_session()
 
 
 if __name__ == '__main__':

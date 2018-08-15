@@ -1,8 +1,9 @@
-import os
-import cv2
+from __future__ import division
 import dlib
 import numpy as np
+import cv2
 import time
+import os
 
 
 def crop_faces(raw_data_dir_postfix='0/',
@@ -172,3 +173,5 @@ def crop_faces(raw_data_dir_postfix='0/',
 
                 # save the cropped images in a folder.
                 cv2.imwrite(crop_with_mask_dir + file_name_only, with_mask)
+
+
