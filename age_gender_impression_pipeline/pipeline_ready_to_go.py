@@ -249,7 +249,8 @@ def crop_faces(raw_data_dir_postfix, raw_data_root_dir, crop_with_mask_root_dir
     if not os.path.exists(cannot_read_dir):
         os.makedirs(cannot_read_dir)
 
-    end_with_key_word = 'g'
+    # end_with_key_word = 'g'
+    end_with_key_word = ('png', 'jpg', 'JPG', 'JPEG', 'jpeg', 'PNG')
 
     path_to_files, file_names = fetch_file(raw_data_dir, 'end_with', end_with_key_word)  # all files in subdirectories
     total_file_len = len(file_names)
@@ -270,9 +271,7 @@ def crop_faces(raw_data_dir_postfix, raw_data_root_dir, crop_with_mask_root_dir
     for i, (file_name_only, file_path) in enumerate(zip(file_names, path_to_files)):
 
         #todo: for debug purpose.
-        print file_name_only
-
-
+        # print i, len(file_names), file_name_only
 
         img = cv2.imread(file_path)
         if img is None:
@@ -285,22 +284,23 @@ def crop_faces(raw_data_dir_postfix, raw_data_root_dir, crop_with_mask_root_dir
         img_h, img_w, _ = np.shape(img)
 
         detected = detector(img, 1)
+        dets, scores, indx = detector.run(img, 1, -1)
 
         if len(detected) == 0:
             no_face_count += 1
-            if no_face_count % 5 == 0:
+            if no_face_count % 100 == 0:
                 print('So far #{} photos have no face'.format(no_face_count))
             cv2.imwrite(no_face_dir + file_name_only, img)
 
         elif len(detected) > 1:
             multi_face_count += 1
-            if multi_face_count % 5 == 0:
+            if multi_face_count % 100 == 0:
                 print('So far #{} photos have multiple faces'.format(multi_face_count))
             cv2.imwrite(multi_face_dir + file_name_only, img)
 
         else:
             count += 1
-            if count % 50 == 0:
+            if count % 100 == 0:
                 print('So far {} single face detected out of {}, elapsed time = {}'.format(
                     count, total_file_len, time.time()-start_t))
 
@@ -543,7 +543,7 @@ def main():
 
 # crunch base is all done, except the special case 2. its face crop process is not done yet. need to handle.
 
-    feat_prefix = 'crunchbase'
+    feat_prefix = 'linkedin'
     raw_data_root_dir = '/home/amanda/Documents/VC and Entrepreneur Faces Project/New_data/'+feat_prefix+'/'
 
     crop_with_mask_root_dir = '/home/amanda/Documents/cropped_new_'+feat_prefix+'/'
@@ -556,38 +556,9 @@ def main():
         special_case = ['2/']  #
         '''
         '2/'
-        So far 1896 single face detected out of 3606, elapsed time = 579.934873104
-    Traceback (most recent call last):
-      File "/home/amanda/Github/impression_personality/age_gender_impression_pipeline/pipeline_ready_to_go.py", line 567, in <module>
-        main()
-      File "/home/amanda/Github/impression_personality/age_gender_impression_pipeline/pipeline_ready_to_go.py", line 549, in main
-        crop_with_mask_root_dir=crop_with_mask_root_dir)
       File "/home/amanda/Github/impression_personality/age_gender_impression_pipeline/pipeline_ready_to_go.py", line 279, in crop_faces
         detected = detector(img, 1)
     RuntimeError: Unsupported image type, must be 8bit gray or RGB image.
-
-
-        '4/'
-        Start estimating age and gender...
-    Traceback (most recent call last):
-      File "/home/amanda/Github/impression_personality/age_gender_impression_pipeline/pipeline_ready_to_go.py", line 580, in <module>
-        main()
-      File "/home/amanda/Github/impression_personality/age_gender_impression_pipeline/pipeline_ready_to_go.py", line 566, in main
-        save_result_root_dir=save_result_root_dir)
-      File "/home/amanda/Github/impression_personality/age_gender_impression_pipeline/pipeline_ready_to_go.py", line 421, in predict_gen_and_age
-        model.load_weights(weight_file)
-      File "/usr/local/lib/python2.7/dist-packages/keras/engine/network.py", line 1161, in load_weights
-        f, self.layers, reshape=reshape)
-      File "/usr/local/lib/python2.7/dist-packages/keras/engine/saving.py", line 928, in load_weights_from_hdf5_group
-        K.batch_set_value(weight_value_tuples)
-      File "/usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py", line 2440, in batch_set_value
-        get_session().run(assign_ops, feed_dict=feed_dict)
-      File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 900, in run
-        run_metadata_ptr)
-      File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1078, in _run
-        'Cannot interpret feed_dict key as Tensor: ' + e.args[0])
-    TypeError: Cannot interpret feed_dict key as Tensor: Tensor Tensor("Placeholder_68:0", shape=(131072, 2), dtype=float32) is not an element of this graph.
-        When a new number of image appears, it should restart the graph. Find out how to do it. 
         '''
 
     # to_do_lst = ['0/', '1/', '2/', '3/', '4/', '5/', '6/', '7/', '8/', '9/', '10/',
@@ -612,7 +583,7 @@ def main():
     # 2
     # ccc01c7 - dbcf - 4
     # fa9 - bfdc - b4c613290dcb_CB.jpg
-    to_do_lst = ['2/']
+    to_do_lst = ['g4/']
 
     for cur_folder_post_fix in to_do_lst:
 
@@ -620,20 +591,93 @@ def main():
                    raw_data_root_dir=raw_data_root_dir,
                    crop_with_mask_root_dir=crop_with_mask_root_dir)
 
-        # predict_gen_and_age(current_folder_post_fix=cur_folder_post_fix,
-        #                     crop_with_mask_root_dir=crop_with_mask_root_dir,
-        #                     save_result_root_dir=save_result_root_dir)
-        #
-        # predict_impression(current_folder_post_fix=cur_folder_post_fix,
-        #                    crop_with_mask_root_dir=crop_with_mask_root_dir,
-        #                    save_result_root_dir=save_result_root_dir,
-        #                    feat_prefix=feat_prefix,
-        #                    csv_save_dir=csv_save_dir)
+        predict_gen_and_age(current_folder_post_fix=cur_folder_post_fix,
+                            crop_with_mask_root_dir=crop_with_mask_root_dir,
+                            save_result_root_dir=save_result_root_dir)
+
+        predict_impression(current_folder_post_fix=cur_folder_post_fix,
+                           crop_with_mask_root_dir=crop_with_mask_root_dir,
+                           save_result_root_dir=save_result_root_dir,
+                           feat_prefix=feat_prefix,
+                           csv_save_dir=csv_save_dir)
 
         print('\nTotal time elapsed after directory {} is {:.2f} seconds\n\n'.format(cur_folder_post_fix, time.time()-start_t))
 
     return
 
 
+def profile_image():
+    start_t = time.time()
+
+    # crunch base is all done, except the special case 2. its face crop process is not done yet. need to handle.
+
+    feat_prefix = 'ProfileImageDataset'
+    raw_data_root_dir = '/home/amanda/Github/'
+
+    crop_with_mask_root_dir = '/home/amanda/Documents/cropped_david_dataset/'
+    save_result_root_dir = '/home/amanda/Documents/predicted_results/david_data/'
+    csv_save_dir = save_result_root_dir + 'to_david/'
+
+    if not os.path.exists(csv_save_dir):
+        os.makedirs(csv_save_dir)
+
+    cur_folder_post_fix = 'ProfileImageDataset/'
+
+    crop_faces(raw_data_dir_postfix=cur_folder_post_fix,
+               raw_data_root_dir=raw_data_root_dir,
+               crop_with_mask_root_dir=crop_with_mask_root_dir)
+
+    predict_gen_and_age(current_folder_post_fix=cur_folder_post_fix,
+                        crop_with_mask_root_dir=crop_with_mask_root_dir,
+                        save_result_root_dir=save_result_root_dir)
+
+    predict_impression(current_folder_post_fix=cur_folder_post_fix,
+                       crop_with_mask_root_dir=crop_with_mask_root_dir,
+                       save_result_root_dir=save_result_root_dir,
+                       feat_prefix=feat_prefix,
+                       csv_save_dir=csv_save_dir)
+
+    print('\nTotal time elapsed after directory {} is {:.2f} seconds\n\n'.format(cur_folder_post_fix,
+                                                                                 time.time() - start_t))
+    return
+
+
+def vc_old_data():
+    start_t = time.time()
+
+    # crunch base is all done, except the special case 2. its face crop process is not done yet. need to handle.
+    feat_prefix_lst = ['vc', 'e']
+
+    for feat_prefix in feat_prefix_lst:
+        raw_data_root_dir = '/home/amanda/Dropbox/VC and Entrepreneur Faces Database/Old Analysis - Extracted Faces/'
+
+        cur_folder_post_fix = feat_prefix + '/'
+        crop_with_mask_root_dir = '/home/amanda/Documents/cropped_new_' + feat_prefix + '/'
+        save_result_root_dir = '/home/amanda/Documents/predicted_results/' + feat_prefix + '_new_data/'
+        csv_save_dir = save_result_root_dir + 'to_will/'
+
+        if not os.path.exists(csv_save_dir):
+            os.makedirs(csv_save_dir)
+
+        crop_faces(raw_data_dir_postfix=cur_folder_post_fix,
+                   raw_data_root_dir=raw_data_root_dir,
+                   crop_with_mask_root_dir=crop_with_mask_root_dir)
+
+        predict_gen_and_age(current_folder_post_fix=cur_folder_post_fix,
+                            crop_with_mask_root_dir=crop_with_mask_root_dir,
+                            save_result_root_dir=save_result_root_dir)
+
+        predict_impression(current_folder_post_fix=cur_folder_post_fix,
+                           crop_with_mask_root_dir=crop_with_mask_root_dir,
+                           save_result_root_dir=save_result_root_dir,
+                           feat_prefix=feat_prefix,
+                           csv_save_dir=csv_save_dir)
+
+        print('\nTotal time elapsed after directory {} is {:.2f} seconds\n\n'.format(cur_folder_post_fix,
+                                                                                     time.time() - start_t))
+
+    return
+
+
 if __name__ == '__main__':
-    main()
+    vc_old_data()
