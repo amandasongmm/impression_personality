@@ -27,6 +27,7 @@ vgg_mean = [103.939, 116.779, 123.68]
 feat_save_dir = '/home/amanda/Documents/feat_folder/'  # extracted feature from either 2k dir, or new dataset dir.
 model_save_dir = '/home/amanda/Documents/vgg_model/2k_summer_analysis/'  # save pca and regression model trained on 2k.
 feature_lst = ['trustworthy', 'intelligent', 'attractive', 'aggressive', 'responsible', 'sociable']
+end_with_key_word = ('png', 'jpg', 'JPG', 'JPEG', 'jpeg', 'PNG')
 
 if not os.path.exists(feat_save_dir):
     os.makedirs(feat_save_dir)
@@ -354,7 +355,7 @@ def train_on_full_2k():
 
     # extract 2k feature.
     img_dir = '/home/amanda/Github/attractiveness_datamining/MIT2kFaceDataset/2kfaces/'
-    file_names = [f for f in os.listdir(img_dir) if f[-3:] == 'jpg' or f[-3:] == 'png']
+    file_names = [f for f in os.listdir(img_dir) if f.endswith(end_with_key_word)]
     feat_prefix = '2k_face'
     feat_arr, valid_img_lst = extract_features(img_dir, file_names, feat_prefix, vgg_batch_size)
 
@@ -418,7 +419,7 @@ def predict_gen_and_age(current_folder_post_fix, crop_with_mask_root_dir, save_r
     if not os.path.exists(save_result_dir):
         os.makedirs(save_result_dir)
 
-    file_lst = [f for f in os.listdir(crop_with_mask_dir)if f[-4:] == '.jpg' or f[-4:] == '.png']
+    file_lst = [f for f in os.listdir(crop_with_mask_dir) if f.endswith(end_with_key_word)]
 
     file_num = len(file_lst)
 
@@ -477,7 +478,7 @@ def predict_impression(current_folder_post_fix, crop_with_mask_root_dir, save_re
 
     # extract all the images' features in one array in a specified folder.
     crop_with_mask_dir = crop_with_mask_root_dir + current_folder_post_fix
-    file_names = [f for f in os.listdir(crop_with_mask_dir) if f[-3:] == 'jpg' or f[-3:] == 'png']
+    file_names = [f for f in os.listdir(crop_with_mask_dir) if f.endswith(end_with_key_word)]
 
     save_result_dir = save_result_root_dir + current_folder_post_fix
 
@@ -623,9 +624,9 @@ def profile_image():
 
     cur_folder_post_fix = 'ProfileImageDataset/'
 
-    crop_faces(raw_data_dir_postfix=cur_folder_post_fix,
-               raw_data_root_dir=raw_data_root_dir,
-               crop_with_mask_root_dir=crop_with_mask_root_dir)
+    # crop_faces(raw_data_dir_postfix=cur_folder_post_fix,
+    #            raw_data_root_dir=raw_data_root_dir,
+    #            crop_with_mask_root_dir=crop_with_mask_root_dir)
 
     predict_gen_and_age(current_folder_post_fix=cur_folder_post_fix,
                         crop_with_mask_root_dir=crop_with_mask_root_dir,
@@ -649,6 +650,7 @@ def vc_old_data():
     feat_prefix_lst = ['vc', 'e']
 
     for feat_prefix in feat_prefix_lst:
+    # feat_prefix = 'e'
         raw_data_root_dir = '/home/amanda/Dropbox/VC and Entrepreneur Faces Database/Old Analysis - Extracted Faces/'
 
         cur_folder_post_fix = feat_prefix + '/'
@@ -659,9 +661,9 @@ def vc_old_data():
         if not os.path.exists(csv_save_dir):
             os.makedirs(csv_save_dir)
 
-        crop_faces(raw_data_dir_postfix=cur_folder_post_fix,
-                   raw_data_root_dir=raw_data_root_dir,
-                   crop_with_mask_root_dir=crop_with_mask_root_dir)
+        # crop_faces(raw_data_dir_postfix=cur_folder_post_fix,
+        #            raw_data_root_dir=raw_data_root_dir,
+        #            crop_with_mask_root_dir=crop_with_mask_root_dir)
 
         predict_gen_and_age(current_folder_post_fix=cur_folder_post_fix,
                             crop_with_mask_root_dir=crop_with_mask_root_dir,
@@ -674,10 +676,11 @@ def vc_old_data():
                            csv_save_dir=csv_save_dir)
 
         print('\nTotal time elapsed after directory {} is {:.2f} seconds\n\n'.format(cur_folder_post_fix,
-                                                                                     time.time() - start_t))
+                                                                                 time.time() - start_t))
 
     return
 
 
 if __name__ == '__main__':
-    vc_old_data()
+    # vc_old_data()
+    profile_image()
